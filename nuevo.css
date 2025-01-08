@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+body{
+    background-color: #343541d9;
+}
+.description {
+    color: white !important;
+}
+.bar_Nav{
+    display: none;
+}
+header { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3498db; /* Azul suave */
+    border-radius: 15px; /* Bordes redondeados */
+    color: white;
+    margin: 20px;
+    padding: 20px 40px; /* Aumenté el padding para darle más espacio */
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative; /* Para controlar la posición */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9), /* Sombra hacia abajo y hacia la izquierda */
+    -2px -2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar el efecto hundido */
+    z-index: 1; /* Para asegurarnos de que el letrero esté por encima de otros elementos */
+}
+
+.logo {
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+}
+
+ul, ul a {
+    list-style: none;
+    text-decoration: none;
+}    
+
+img {
+    height: 70px;
+}
+
+.barNav a {
+    color: #ffffff; /* Color de los enlaces (azul) */
+    text-decoration: none;
+    font-weight: bold ;
+    padding: 10px;
+    transition: color 0.3s ease; /* Transición suave para el hover */
+}
+.navResponsive {
+    display: none;
+}
+
+.barNav a:hover {
+    color: #0c0c0c; /* Verde brillante al hacer hover */
+}
+
+/* Menu horizontal por defecto */
+.menu-horizontal {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    transition: transform 0.3s ease;
+    font-size: 0.7em;
+    flex-direction: row;  /* Los items estarán en fila por defecto */
+}
+nav {
+    position: fixed;
+    left:70%;
+    transform: translateX(-50%);
+    max-width: 1000px;
+    margin: auto;
+    background-color: #f0f2f6c6; /* Fondo blanco para el nav */
+    font-size: 30px;
+    margin-top: 10px;
+    box-shadow: 0 8px 6px rgba(0, 0, 0, 0.1); /* Agregar sombra suave */
+    border-radius: 8px; /* Bordes redondeados */
+    /* border: solid;
+    border-color: #0e0e0e; */
+
+}
+
+
+/* Media Query para dispositivos pequeños (móviles) */
+@media (min-width: 100px) and (max-width: 700px) {
+
+    header .logo, .barNav {
+        display: none !important;
+    }
+    .bar_Nav{
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        left:50%;
+        transform: translateX(-50%);
+        max-width: 900px;
+        margin: auto;
+        background-color: #f0f2f6c6; /* Fondo blanco para el nav */
+        font-size: 20px;
+        margin-top: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agregar sombra suave */
+        border-radius: 8px; /* Bordes redondeados */
+    }
+    
+    .barNav a {
+        color: #3498db; /* Color de los enlaces (azul) */
+        text-decoration: none;
+        font-weight: bold ;
+        padding: 10px;
+        transition: color 0.3s ease; /* Transición suave para el hover */
+    }
+    
+    .barNav a:hover {
+        color: #0c0c0c; /* Verde brillante al hacer hover */
+    }
+    
+    /* Submenu (si lo tienes) */
+    .menu-vertical a {
+        color: #3498db; /* Azul para el submenu */
+    }
+    
+    .menu-vertical a:hover {
+        color: #0e0e0e; /* Verde brillante para el hover en el submenu */
+        
+    }
+    .menu-horizontal{
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        transition: transform 0.3s ease;
+    }
+    .menu-horizontal > li > a {
+        display: block;
+        padding: 15px 20px;
+    }
+    .menu-horizontal > li:hover {
+        background-color: #ffffff;
+    }
+    .menu-horizontal >li > a:hover{
+        transform: scale(1.2);
+    }
+    .menu-vertical{
+        position: absolute;
+        padding: 20px 20px;
+        display:none;
+        list-style: none;
+        width: 200px;
+        background-color: #f4f4f9;
+        color:#909093;
+    }
+    .menu-vertical:hover{
+        color:#2980b9;
+    }
+    .menu-horizontal li:hover .menu-vertical{
+        display: block;
+        
+    }
+    .zoom{
+        display: block;
+        padding: 20px 20px 20px 25px;
+        transition: transform 0.3 ease;
+    }
+    .zoom:hover{
+        transform: scale(1.50);
+        background-color: #90909350;
+    }
+    .nav_container{
+        width:90%;
+        margin: 0 auto;
+        height: 15px;
+
+        display: grid;
+        grid-template-columns: max-content max-content;
+        grid-template-areas: title img;
+        justify-content: space-between;
+        align-items: center;
+
+        overflow: hidden;
+    }
+    .nav_title{
+        grid-area: title;
+    }
+    .nav_menu{
+        grid-area: img;
+        position: relative;
+        z-index: 10;
+    }
+    .nav_icon{
+
+        height: 20px;
+        width: 20px;
+        display: block;
+    }
+
+    /* Aquí aseguramos que el menú siga siendo horizontal en pantallas pequeñas */
+    .menu-horizontal {
+        flex-direction: row;  /* Mantener los items en fila */
+        justify-content: space-evenly; /* Espaciado uniforme */
+        font-size: 1px;
+        
+    }
+    .menu-horizontal li a {
+        font-size: 15px;
+    }
+
+    .menu-horizontal li {
+        margin-bottom: 0;
+    }
+
+    .button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .instrucciones {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+}
+
+/* Media Query para tablets */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 1.8rem;
+        padding: 20px 30px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .menu-horizontal {
+        flex-direction: row;  /* Aseguramos que sea horizontal también en tablets */
+        font-size: 1.2rem;
+        justify-content: space-evenly;
+    }
+
+    .menu-horizontal li {
+        margin-bottom: 0;
+    }
+
+    .button {
+        font-size: 1rem;
+        padding: 10px 18px;
+    }
+
+    .instrucciones {
+        font-size: 2.3rem;
+    }
+
+    .description {
+        font-size: 1.1rem;
+        max-width: 90%;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2980b9;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-top: 4px solid #2ecc71; /* Línea decorativa */
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f9;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.titulo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #2980b9;
+    transform: scale(1.50);
+}
+
+.instrucciones {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2980b9; /* Azul más oscuro */
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil para resaltar */
+    background-color: white;
+    margin: 15px auto;
+    max-width: 300px;
+    border-radius: 15px;
+}
+
+h1.instrucciones {
+    margin-top: 100px;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #333333; /* Gris oscuro */
+    text-align: center;
+    margin: 15px auto;
+    max-width: 700px; /* Limitar el ancho para mejor lectura */
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+
