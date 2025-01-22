@@ -381,7 +381,7 @@ span{
 
 
     .contenido{
-        background-color: red;
+        background-color: black;
         border: solid 2px black;
 
 
@@ -397,7 +397,7 @@ span{
         text-align: center;
     }
     .producto{
-        background-color: red;
+        background-color: black;
         border: solid 2px black;
 
         display: flex;
