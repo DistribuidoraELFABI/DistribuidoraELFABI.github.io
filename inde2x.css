@@ -435,4 +435,37 @@ span{
     
         background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
     }
+    nav.menu {
+    position: fixed; /* Fija el nav en la pantalla */
+    bottom: 0; /* Lo coloca en la parte inferior */
+    left: 0; /* Lo alinea con el borde izquierdo */
+    width: 100%; /* Hace que el nav ocupe todo el ancho de la pantalla */
+    background-color: #fff; /* Establece el color de fondo */
+    z-index: 1000; /* Asegura que el nav quede encima de otros elementos */
+    box-shadow: 0 -4px 2px -2px gray; /* Sombra en la parte superior del nav */
+}
+
+nav.menu ul {
+    display: flex; /* Disposición horizontal */
+    justify-content: space-between; /* Espacio igual entre los elementos */
+    margin: 0;
+    padding: 10px 20px; /* Espaciado dentro del nav */
+    list-style: none; /* Elimina los puntos de la lista */
+}
+
+nav.menu ul li {
+    display: inline-block; /* Alinea los elementos en línea */
+}
+
+nav.menu ul li a {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: #333; /* Color del texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    padding: 8px 16px; /* Espaciado alrededor del enlace */
+}
+
+nav.menu ul li a:hover {
+    background-color: #f0f0f0; /* Cambio de fondo al pasar el ratón */
+}
+
 }
