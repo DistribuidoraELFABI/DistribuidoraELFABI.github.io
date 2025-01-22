@@ -3,25 +3,359 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>DISTRIBUIDORA ELFABI</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="inde2x.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body style="background-color: #b4ee8e8f;">
-    <header>DISTRIBUIDORA ELFABI</header>
-    <nav class="barNav">
-        <ul class="menu-horizontal">
-            <li><a href="index.html">Inicio</a></li>
-            <li>
-                <a href="#">Servicios</a>
-                <ul class="menu-vertical">
-                    <li class="zoom"><a href="catalogo.html">Catálogo</a></li>
-                    <li class="zoom"><a href="cotizar.html">Cotizar</a></li>
-                    <li class="zoom"><a href="comprar.html">Comprar</a></li>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h2 class="responsive-hidden">Distribuidora ELFABI</h2>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="inde2x.css"></a>Inicio</li>
+                    <li><a href="catalogo.html"></a>Catálogo</li>
+                    <li><a href="contactos.html"></a>Contactos</li>
                 </ul>
-            </li>
-            <li><a href="contactos.html">Asistencia inmediata</a></li>
-        </ul>
-    </nav>
-    <h2 class="instruciones">Este es nuestro catálogo digital, puede agregar al carrito los insumos que desee</h2>
+            </div>
+            <div class="cart">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-cart">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                </svg>            
+            </div>
+        </nav>
+        <script src="./javascript/move_cart.js"></script>
+    </header>
+    <main>
+        <div class="contenido">
+             <!-- Guantes -->
+        <section id="guantes">
+
+            <div class="producto">
+                <div class="letra-img">
+                    <img src="./img/GUANTES LATEX L.jpg" alt="guantes de manejo de latex a la venta. talla del guante small" class="producto-img">
+                    <div class="titulo" id="nombreproducto1">
+                        <span class="titulo-producto letreros" id="nombreproducto1">Guantes Latex Talla S</span>
+                        <span class="titulo-cantidad letreros"id="descripcionproducto1">Caja de 100 unidades</span>
+                    </div>
+                    <div class="etiqueta-price">
+                        <p class="precio" id="cantidadproducto1">$6.<span class="decimales">50</span></p>
+                    </div>
+                </div>
+                <div class="producto-info">
+                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto1">
+                    <div class="agregar-quitar">
+                        <button class="quitar" onclick="quitarDelCarrito('Guante de látex talla S', 12.99, 'cantidad-guante1')">- &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Guante de látex talla S', 12.99, 'cantidad-guante1')">+ &#x1F6D2;</button>
+                    </div>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="letra-img">
+                    <img src="./img/GUANTES LATEX L.jpg" alt="Guantes de manejo de látex talla M" class="producto-img">
+                    <div class="titulo" id="nombreproducto2">
+                        <span class="titulo-producto letreros" id="nombreproducto2">Guantes Latex Talla M</span>
+                        <span class="titulo-cantidad letreros" id="descripcionproducto2">Caja de 100 unidades</span>
+                    </div>
+                    <div class="etiqueta-price">
+                        <p class="precio" id="cantidadproducto2">$6.<span class="decimales">50</span></p>
+                    </div>
+                </div>
+                <div class="producto-info">
+                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto2">
+                    <div class="agregar-quitar">
+                        <button class="quitar" onclick="quitarDelCarrito('Guante de látex talla M', 12.99, 'cantidad-guante2')">- &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Guante de látex talla M', 12.99, 'cantidad-guante2')">+ &#x1F6D2;</button>
+                    </div>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="letra-img">
+                    <img src="./img/GUANTES LATEX L.jpg" alt="Guantes de manejo de látex talla L" class="producto-img">
+                    <div class="titulo" id="nombreproducto3">
+                        <span class="titulo-producto letreros" id="nombreproducto3">Guantes Latex Talla L</span>
+                        <span class="titulo-cantidad letreros" id="descripcionproducto3">Caja de 100 unidades</span>
+                    </div>
+                    <div class="etiqueta-price">
+                        <p class="precio" id="cantidadproducto3">$6.<span class="decimales">50</span></p>
+                    </div>
+                </div>
+                <div class="producto-info">
+                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto3">
+                    <div class="agregar-quitar">
+                        <button class="quitar" onclick="quitarDelCarrito('Guante de látex talla L', 12.99, 'cantidad-guante3')">- &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Guante de látex talla L', 12.99, 'cantidad-guante3')">+ &#x1F6D2;</button>
+                    </div>
+                </div>
+            </div>
+            
+                        <!-- Guantes de nitrilo -->
+<div class="producto">
+    <div class="letra-img">
+        <img src="./img/Guantes-de-Nitrilo-Negro.jpg" alt="Guantes de nitrilo talla S" class="producto-img">
+        <div class="titulo" id="nombreproducto4">
+            <span class="titulo-producto letreros" id="nombreproducto4">Guantes Nitrilo Talla S</span>
+            <span class="titulo-cantidad letreros" id="descripcionproducto4">Caja de 100 unidades</span>
+        </div>
+        <div class="etiqueta-price">
+            <p class="precio" id="cantidadproducto4">$8.<span class="decimales">50</span></p>
+        </div>
+    </div>
+    <div class="producto-info">
+        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto4">
+        <div class="agregar-quitar">
+            <button class="quitar" onclick="quitarDelCarrito('Guante de nitrilo talla S', 8.50, 'cantidad-guante4')">- &#x1F6D2;</button>
+            <button class="agregar" onclick="agregarAlCarrito('Guante de nitrilo talla S', 8.50, 'cantidad-guante4')">+ &#x1F6D2;</button>
+        </div>
+    </div>
+</div>
+
+<div class="producto">
+    <div class="letra-img">
+        <img src="./img/Guantes-de-Nitrilo-Negro.jpg" alt="Guantes de nitrilo talla M" class="producto-img">
+        <div class="titulo" id="nombreproducto5">
+            <span class="titulo-producto letreros" id="nombreproducto5">Guantes Nitrilo Talla M</span>
+            <span class="titulo-cantidad letreros" id="descripcionproducto5">Caja de 100 unidades</span>
+        </div>
+        <div class="etiqueta-price">
+            <p class="precio" id="cantidadproducto5">$8.<span class="decimales">50</span></p>
+        </div>
+    </div>
+    <div class="producto-info">
+        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto5">
+        <div class="agregar-quitar">
+            <button class="quitar" onclick="quitarDelCarrito('Guante de nitrilo talla M', 8.50, 'cantidad-guante5')">- &#x1F6D2;</button>
+            <button class="agregar" onclick="agregarAlCarrito('Guante de nitrilo talla M', 8.50, 'cantidad-guante5')">+ &#x1F6D2;</button>
+        </div>
+    </div>
+</div>
+
+<div class="producto">
+    <div class="letra-img">
+        <img src="./img/Guantes-de-Nitrilo-Negro.jpg" alt="Guantes de nitrilo talla L" class="producto-img">
+        <div class="titulo" id="nombreproducto6">
+            <span class="titulo-producto letreros" id="nombreproducto6">Guantes Nitrilo Talla L</span>
+            <span class="titulo-cantidad letreros" id="descripcionproducto6">Caja de 100 unidades</span>
+        </div>
+        <div class="etiqueta-price">
+            <p class="precio" id="cantidadproducto6">$8.<span class="decimales">50</span></p>
+        </div>
+    </div>
+    <div class="producto-info">
+        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto6">
+        <div class="agregar-quitar">
+            <button class="quitar" onclick="quitarDelCarrito('Guante de nitrilo talla L', 8.50, 'cantidad-guante6')">- &#x1F6D2;</button>
+            <button class="agregar" onclick="agregarAlCarrito('Guante de nitrilo talla L', 8.50, 'cantidad-guante6')">+ &#x1F6D2;</button>
+        </div>
+    </div>
+</div>
+
+            <!-- Guantes Estériles -->
+            <div class="producto">
+                <div class="letra-img">
+                    <img src="./img/guantesesteril.jpg" alt="Guantes quirúrgicos estériles talla 6.5" class="producto-img">
+                    <div class="titulo" id="nombreproducto7">
+                        <span class="titulo-producto letreros" id="nombreproducto7">Guantes Quirúrgicos Estériles Talla 6.5</span>
+                        <span class="titulo-cantidad letreros" id="descripcionproducto7">Caja de 50 pares</span>
+                    </div>
+                    <div class="etiqueta-price">
+                        <p class="precio" id="cantidadproducto7">$30.<span class="decimales">00</span></p>
+                    </div>
+                </div>
+                <div class="producto-info">
+                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto7">
+                    <div class="agregar-quitar">
+                        <button class="quitar" onclick="quitarDelCarrito('Guante quirúrgico estéril talla 6.5', 30.00, 'cantidad-guante7')">- &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Guante quirúrgico estéril talla 6.5', 30.00, 'cantidad-guante7')">+ &#x1F6D2;</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="producto">
+                <div class="letra-img">
+                    <img src="./img/guantesesteril.jpg" alt="Guantes quirúrgicos estériles talla 7" class="producto-img">
+                    <div class="titulo" id="nombreproducto8">
+                        <span class="titulo-producto letreros" id="nombreproducto8">Guantes Quirúrgicos Estériles Talla 7</span>
+                        <span class="titulo-cantidad letreros" id="descripcionproducto8">Caja de 50 pares</span>
+                    </div>
+                    <div class="etiqueta-price">
+                        <p class="precio" id="cantidadproducto8">$30.<span class="decimales">00</span></p>
+                    </div>
+                </div>
+                <div class="producto-info">
+                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto8">
+                    <div class="agregar-quitar">
+                        <button class="quitar" onclick="quitarDelCarrito('Guante quirúrgico estéril talla 7', 30.00, 'cantidad-guante8')">- &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Guante quirúrgico estéril talla 7', 30.00, 'cantidad-guante8')">+ &#x1F6D2;</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="producto">
+                <div class="letra-img">
+                    <img src="./img/guantesesteril.jpg" alt="Guantes quirúrgicos estériles talla 7.5" class="producto-img">
+                    <div class="titulo" id="nombreproducto9">
+                        <span class="titulo-producto letreros" id="nombreproducto9">Guantes Quirúrgicos Estériles Talla 7.5</span>
+                        <span class="titulo-cantidad letreros" id="descripcionproducto9">Caja de 50 pares</span>
+                    </div>
+                    <div class="etiqueta-price">
+                        <p class="precio" id="cantidadproducto9">$30.<span class="decimales">00</span></p>
+                    </div>
+                </div>
+                <div class="producto-info">
+                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto9">
+                    <div class="agregar-quitar">
+                        <button class="quitar" onclick="quitarDelCarrito('Guante quirúrgico estéril talla 7.5', 30.00, 'cantidad-guante9')">- &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Guante quirúrgico estéril talla 7.5', 30.00, 'cantidad-guante9')">+ &#x1F6D2;</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="producto">
+                <div class="letra-img">
+                    <img src="./img/guantesesteril.jpg" alt="Guantes quirúrgicos estériles talla 8" class="producto-img">
+                    <div class="titulo" id="nombreproducto10">
+                        <span class="titulo-producto letreros" id="nombreproducto10">Guantes Quirúrgicos Estériles Talla 8</span>
+                        <span class="titulo-cantidad letreros" id="descripcionproducto10">Caja de 50 pares</span>
+                    </div>
+                    <div class="etiqueta-price">
+                        <p class="precio" id="cantidadproducto10">$30.<span class="decimales">00</span></p>
+                    </div>
+                </div>
+                <div class="producto-info">
+                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto10">
+                    <div class="agregar-quitar">
+                        <button class="quitar" onclick="quitarDelCarrito('Guante quirúrgico estéril talla 8', 30.00, 'cantidad-guante10')">- &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Guante quirúrgico estéril talla 8', 30.00, 'cantidad-guante10')">+ &#x1F6D2;</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="producto">
+                <div class="letra-img">
+                    <img src="./img/guantesesteril.jpg" alt="Guantes quirúrgicos estériles talla 8.5" class="producto-img">
+                    <div class="titulo" id="nombreproducto11">
+                        <span class="titulo-producto letreros" id="nombreproducto11">Guantes Quirúrgicos Estériles Talla 8.5</span>
+                        <span class="titulo-cantidad letreros" id="descripcionproducto11">Caja de 50 pares</span>
+                    </div>
+                    <div class="etiqueta-price">
+                        <p class="precio" id="cantidadproducto11">$30.<span class="decimales">00</span></p>
+                    </div>
+                </div>
+                <div class="producto-info">
+                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto11">
+                    <div class="agregar-quitar">
+                        <button class="quitar" onclick="quitarDelCarrito('Guante quirúrgico estéril talla 8.5', 30.00, 'cantidad-guante11')">- &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Guante quirúrgico estéril talla 8.5', 30.00, 'cantidad-guante11')">+ &#x1F6D2;</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- borrar -->
+        </section>
+
+        <!-- Hilos de sutura -->
+        <section id="hilos-sutura">
+
+            <!-- Producto en Hilos de Sutura -->
+            <div class="producto">
+                <div class="letra-img">
+                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 2-0" class="producto-img">
+                    <div class="titulo" id="nombreproducto12">
+                        <span class="titulo-producto letreros" id="nombreproducto12">Hilo de Sutura Nylon 2-0</span>
+                        <span class="titulo-cantidad letreros" id="descripcionproducto12">Caja de 36 unidades</span>
+                    </div>
+                    <div class="etiqueta-price">
+                        <p class="precio" id="cantidadproducto12">$48.<span class="decimales">00</span></p>
+                    </div>
+                </div>
+                <div class="producto-info">
+                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto12">
+                    <div class="agregar-quitar">
+                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 2-0', 48.00, 'cantidad-hilo12')">- &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 2-0', 48.00, 'cantidad-hilo12')">+ &#x1F6D2;</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="producto">
+                <div class="letra-img">
+                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 3-0" class="producto-img">
+                    <div class="titulo" id="nombreproducto13">
+                        <span class="titulo-producto letreros" id="nombreproducto13">Hilo de Sutura Nylon 3-0</span>
+                        <span class="titulo-cantidad letreros" id="descripcionproducto13">Caja de 36 unidades</span>
+                    </div>
+                    <div class="etiqueta-price">
+                        <p class="precio" id="cantidadproducto13">$48.<span class="decimales">00</span></p>
+                    </div>
+                </div>
+                <div class="producto-info">
+                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto13">
+                    <div class="agregar-quitar">
+                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 3-0', 48.00, 'cantidad-hilo13')">- &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 3-0', 48.00, 'cantidad-hilo13')">+ &#x1F6D2;</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="producto">
+                <div class="letra-img">
+                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 4-0" class="producto-img">
+                    <div class="titulo" id="nombreproducto14">
+                        <span class="titulo-producto letreros" id="nombreproducto14">Hilo de Sutura Nylon 4-0</span>
+                        <span class="titulo-cantidad letreros" id="descripcionproducto14">Caja de 36 unidades</span>
+                    </div>
+                    <div class="etiqueta-price">
+                        <p class="precio" id="cantidadproducto14">$48.<span class="decimales">00</span></p>
+                    </div>
+                </div>
+                <div class="producto-info">
+                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto14">
+                    <div class="agregar-quitar">
+                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 4-0', 48.00, 'cantidad-hilo14')">- &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 4-0', 48.00, 'cantidad-hilo14')">+ &#x1F6D2;</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="producto">
+                <div class="letra-img">
+                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 5-0" class="producto-img">
+                    <div class="titulo" id="nombreproducto15">
+                        <span class="titulo-producto letreros" id="nombreproducto15">Hilo de Sutura Nylon 5-0</span>
+                        <span class="titulo-cantidad letreros" id="descripcionproducto15">Caja de 36 unidades</span>
+                    </div>
+                    <div class="etiqueta-price">
+                        <p class="precio" id="cantidadproducto15">$48.<span class="decimales">00</span></p>
+                    </div>
+                </div>
+                <div class="producto-info">
+                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto15">
+                    <div class="agregar-quitar">
+                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 5-0', 48.00, 'cantidad-hilo15')">- &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 5-0', 48.00, 'cantidad-hilo15')">+ &#x1F6D2;</button>
+                    </div>
+                </div>
+            </div>
+            
+
+        </section>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#" onclick="myFunction()" id="menu0" class="retroceder"><i class="fas fa-arrow-left"></i></a></li>
+                <li><a href="" id="menu1">Insumos</a></li>
+                <li><a href="" id="menu2" class="avanzar"><i class="fas fa-arrow-right"></i></a></li>
+        
+            </ul>
+        </nav>
+        
+    </main>
+    <footer>
+        footer
+    </footer>
+
 </body>
 </html>
