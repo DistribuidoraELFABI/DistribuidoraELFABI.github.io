@@ -233,16 +233,10 @@ window.generarPDF= function() {
     enlaceDescarga.click();  // Inicia la descarga del PDF
 
 }
-
-// window.mostrarBotonWhatsApp= function(pdfURL) {
-//     // Crear un botón de WhatsApp que envíe el enlace del PDF
-//     const enlaceWhatsApp = document.createElement('a');
-//     enlaceWhatsApp.href = `https://wa.me/593962735406?text=Aquí está tu carrito de compras: ${pdfURL}
-// `;
-//     enlaceWhatsApp.target = "_blank"; // Abrir en nueva pestaña
-//     enlaceWhatsApp.innerText = "Enviar por WhatsApp";
-//     // document.body.appendChild(enlaceWhatsApp);  // Agregar el botón a la página
-//     document.getElementById('contenedor-whatsapp').appendChild(enlaceWhatsApp);
-
-// }
-
+window.cambiarValor = function(valor) {
+    let input = document.getElementById("cantidadproducto1");
+    let nuevoValor = parseInt(input.value) + valor;
+    if (nuevoValor >= input.min) {
+        input.value = nuevoValor;
+    }
+}
