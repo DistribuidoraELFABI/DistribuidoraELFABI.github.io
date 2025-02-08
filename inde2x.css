@@ -14,6 +14,9 @@ html{
     padding: 0;
     font-family: 'Open Sans';
 }
+:root{
+    --mi-borde: solid 1px red;
+}
 body{
     width: 98vw;
     height: 98vh;
@@ -41,12 +44,141 @@ main{
     display: grid;
     
 }
+.contador {
+    border: var(--mi-borde);
+
+
+
+}
+.contador button {
+    width: 1.9em;
+    height: 1.2em;
+    font-size: 1.2em;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 30%;
+}
+.contador input {
+    width: 50px;
+    text-align: center;
+}
 section{
     gap:5px;
     
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(256px,1fr));
 }
+/* carrito de compras */
+.carrito-detalles{    
+border-radius: 5px;
+
+    position:fixed;
+    z-index:998;
+    margin:0;
+    width: 95%;
+    background-color: rgba(165, 165, 165, 0.248);
+    transition: transform .6s ease;
+    transform: translate(0,-1050%);
+    
+}
+.carrito-detalles.is-active{
+    transform: translate(0,0);
+}
+.forma-carrito{
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+    height: 70%;
+}
+.menu-div{
+    border: solid 2px rgba(5, 5, 5, 0.581);
+    /* width: 100%; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+ul#lista-productos{
+    border: var(--mi-borde);
+
+    display: flex;
+    flex-direction: column;
+}
+.totalSp{
+    font-size: 1.2rem;
+    color: #131212;
+
+}
+/* Estilos generales para la tabla */
+#tabla-carrito {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #f4f4f9; /* Color de fondo suave */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Encabezado de la tabla */
+#tabla-carrito thead {
+    background-color: #3498db; /* Azul suave */
+    color: white;
+    font-weight: bold;
+}
+
+/* Celdas del encabezado */
+#tabla-carrito th {
+    padding: 12px;
+    text-align: center; /* Centrar los títulos */
+}
+
+/* Celdas del cuerpo */
+#tabla-carrito td {
+    padding: 5px;
+    border-bottom: 1px solid #ddd; /* Separación entre filas */
+    text-align: center; /* Centrar contenido */
+}
+
+/* Alternar color en filas */
+#tabla-carrito tbody tr:nth-child(even) {
+    background-color: #ecf0f1; /* Gris claro */
+}
+
+/* Botón eliminar */
+.eliminar-producto {
+    background-color: #e74c3c; /* Rojo */
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.eliminar-producto:hover {
+    background-color: #c0392b; /* Rojo más oscuro al pasar el mouse */
+}
+
+/* Estilos del total */
+#total-carrito {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 10px;
+}
+
+#total-carrito-valor {
+    color: #4ca72b; /* Verde para el total */
+    padding-left: 10px;
+}
+
+ /* fin estilos tabla */
+/* termina carrito */
 .producto{
     gap:5px;
     border: solid 3px rgb(120, 244, 11);
@@ -275,20 +407,32 @@ span{
     top: -0.05em; /* Ajusta la altura para que sea un superíndice visual */
 }
 
+.letreros{
+    width: 100% !important;
+    border: var(--mi-borde);
+}
+.titulo{
+    width: 100%;
+
+}
+.letra-img{
+    width: 100%;
+}
+
 
 
 @media (max-width:425px){
     .logo>h2{
         display:none;
     }
-    .cart{
-        display: none;
-    }
-    /* .menu>ul{
+    /* .cart{
         display: none;
     } */
     header{
         height: auto;
+    }
+    .nav-links li:nth-child(2) {
+        display: none;
     }
     main{
         border: solid 3px red;
@@ -300,13 +444,7 @@ span{
         "contenido"
         "menu";
     }
-    main .cart{
-        border: solid 1px green;
-        width: 100%;
 
-        grid-area: cart;
-        display: grid;
-    }
 
     .contenido{
         border: solid 1px green;
@@ -381,7 +519,7 @@ span{
 
 
     .contenido{
-        background-color: black;
+        background-color: rgba(20, 20, 20, 0.72);
         border: solid 2px black;
 
 
@@ -397,7 +535,7 @@ span{
         text-align: center;
     }
     .producto{
-        background-color: black;
+        background-color: rgb(18, 18, 18);
         border: solid 2px black;
 
         display: flex;
@@ -436,36 +574,106 @@ span{
         background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
     }
     nav.menu {
-    position: fixed; /* Fija el nav en la pantalla */
-    bottom: 0; /* Lo coloca en la parte inferior */
-    left: 0; /* Lo alinea con el borde izquierdo */
-    width: 100%; /* Hace que el nav ocupe todo el ancho de la pantalla */
-    background-color: #fff; /* Establece el color de fondo */
-    z-index: 1000; /* Asegura que el nav quede encima de otros elementos */
-    box-shadow: 0 -4px 2px -2px gray; /* Sombra en la parte superior del nav */
+        position: fixed; /* Fija el nav en la pantalla */
+        bottom: 0; /* Lo coloca en la parte inferior */
+        left: 0; /* Lo alinea con el borde izquierdo */
+        width: 100%; /* Hace que el nav ocupe todo el ancho de la pantalla */
+        background-color: #fff; /* Establece el color de fondo */
+        z-index: 1000; /* Asegura que el nav quede encima de otros elementos */
+        box-shadow: 0 -4px 2px -2px gray; /* Sombra en la parte superior del nav */
+    }
+    
+    nav.menu ul {
+        display: flex; /* Disposición horizontal */
+        justify-content: space-between; /* Espacio igual entre los elementos */
+        margin: 0;
+        padding: 10px 20px; /* Espaciado dentro del nav */
+        list-style: none; /* Elimina los puntos de la lista */
+    }
+    
+    nav.menu ul li {
+        display: inline-block; /* Alinea los elementos en línea */
+    }
+    
+    nav.menu ul li a {
+        text-decoration: none; /* Elimina el subrayado del enlace */
+        color: #faf8f8; /* Color del texto */
+        font-size: 16px; /* Tamaño de la fuente */
+        padding: 8px 16px; /* Espaciado alrededor del enlace */
+    }
+    
+    nav.menu ul li a:hover {
+        background-color: #f0f0f0; /* Cambio de fondo al pasar el ratón */
+    }
+
+    .cart {
+        position: fixed !important;
+        top: 1rem !important;
+        right: 2rem !important;
+        z-index: 1020 !important;
+        background-color: #2beb28; /* Color de fondo opcional */
+        color: white; /* Color del icono */
+        padding: 0 !important;
+        border-radius: 10%;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    }
+/* Ajustes para pantallas pequeñas (<= 390px) */
+    /* Reducción del tamaño de fuente en la tabla */
+    #tabla-carrito {
+        font-size: 0.8rem; /* Reducir el tamaño de la fuente */
+    }
+
+    /* Celdas del encabezado */
+    #tabla-carrito th {
+        padding: 8px; /* Menos espacio en el encabezado */
+        word-wrap: break-word;
+        min-width: 50px; /* Forzar un ancho mínimo */
+    }
+
+    /* Celdas del cuerpo */
+    #tabla-carrito td {
+        padding: 4px; /* Reducir el padding de las celdas */
+        word-wrap: break-word;
+        min-width: 50px; /* Forzar un ancho mínimo */
+    }
+
+    /* Ajuste de la tabla para que no se desborde */
+    .carrito-detalles {
+        width: 90%; /* Reducir el ancho del contenedor */
+    }
+
+    #tabla-carrito {
+        width: 100%; /* Asegurar que la tabla ocupe el 100% del ancho */
+    }
+
+    .totalSp {
+        font-size: 1rem; /* Reducir tamaño del texto en el total */
+    }
+
+    button {
+        font-size: 0.8rem; /* Reducir el tamaño del botón */
+        padding: 8px 12px; /* Menos padding en los botones */
+    }
+
+    /* Asegurarse de que las celdas no se desborden */
+    #tabla-carrito td, #tabla-carrito th {
+        box-sizing: border-box; /* Incluir padding en el ancho total de las celdas */
+        word-wrap: break-word;
+        white-space: normal;
+    }
+
+    /* Evitar distorsión de filas insertadas por JS */
+    #tabla-carrito tr {
+        display: table-row; /* Asegurarse de que las filas no cambien de estilo */
+        height: auto; /* Asegurarse de que la altura de las filas sea automática */
+    }
+
+    /* Si el texto es muy largo, lo ajustamos */
+    #tabla-carrito td {
+        word-wrap: break-word;
+        max-width: 100px; /* Limitar el ancho máximo de las celdas */
+    }
 }
 
-nav.menu ul {
-    display: flex; /* Disposición horizontal */
-    justify-content: space-between; /* Espacio igual entre los elementos */
-    margin: 0;
-    padding: 10px 20px; /* Espaciado dentro del nav */
-    list-style: none; /* Elimina los puntos de la lista */
-}
 
-nav.menu ul li {
-    display: inline-block; /* Alinea los elementos en línea */
-}
-
-nav.menu ul li a {
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    color: #333; /* Color del texto */
-    font-size: 16px; /* Tamaño de la fuente */
-    padding: 8px 16px; /* Espaciado alrededor del enlace */
-}
-
-nav.menu ul li a:hover {
-    background-color: #f0f0f0; /* Cambio de fondo al pasar el ratón */
-}
-
-}
+        
