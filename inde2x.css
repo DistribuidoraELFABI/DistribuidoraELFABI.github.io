@@ -46,6 +46,8 @@ main{
 }
 .contador {
     border: var(--mi-borde);
+        margin: 0;
+    padding: 0;
 
 
 
