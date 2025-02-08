@@ -673,6 +673,13 @@ span{
         word-wrap: break-word;
         max-width: 100px; /* Limitar el ancho máximo de las celdas */
     }
+        .contador button {
+    min-width: 10px;
+    }
+    .contador input{
+        margin: 0;
+        padding: 0;
+    }
 }
 
 
