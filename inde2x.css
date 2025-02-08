@@ -425,7 +425,7 @@ span{
 
 
 
-@media (max-width:425px){
+@media (max-width:625px){
     .logo>h2{
         display:none;
     }
