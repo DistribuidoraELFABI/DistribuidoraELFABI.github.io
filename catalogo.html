@@ -23,8 +23,8 @@
                 </ul>
             </div>
             <!-- Carrito -->
-             <div>
-                <button class="cart panelBtn hamburger hamburger--vortex" type="button">
+             <div class="boton-cart" >
+                <button class="cart panelBtn " type="button">
                     <span class="forma-carrito">&#x1F6D2;</span>
                 </button>
             </div>
@@ -57,7 +57,6 @@
                     </div>
                     
                 
-        <script src="./javascript/move_cart.js"></script>
     </header>
     <main>
         <div class="contenido">
@@ -77,10 +76,13 @@
                     </div>
                 </div>
                 <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto1">
+                    <div class="contador">
+                        <button onclick="cambiarValor(-1)">-</button>
+                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto1">
+                        <button onclick="cambiarValor(1)">+</button>
+                    </div>
                     <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito(5)">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Guante de látex talla S', 'Caja de 100 unidades', 'cantidadproducto1', 6.50)">+ &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Guante de látex talla S', 'Caja de 100 unidades', 'cantidadproducto1', 6.50)">Agregar &#x1F6D2;</button>
                     </div>
                 </div>
             </div>
@@ -944,6 +946,7 @@
     </main>
     <footer>
         footer
+        <script src="./javascript/move_cart.js"></script>
         <script src="./javascript/carrito.js" type="module"></script>
         <script src="./javascript/hamburguesa.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
