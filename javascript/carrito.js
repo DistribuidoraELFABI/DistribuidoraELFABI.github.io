@@ -166,7 +166,7 @@ window.generarPDF= function() {
     doc.setFontSize(8);
     doc.text("Realice una captura de este archivo y luego pulse en el link de WhatsApp y envíenos su pedido:", margenIzquierdo, margenSuperior + 15);
     // Enlace de WhatsApp
-    const whatsappLink = "https://wa.me/5939620735406";  // El número y enlace de WhatsApp
+    const whatsappLink = "https://wa.me/593962735406";  // El número y enlace de WhatsApp
     doc.setFontSize(16);
     doc.setTextColor(37, 211, 102);
     doc.textWithLink("Link WhatsApp", margenIzquierdo + 125, margenSuperior + 15, { url: whatsappLink });  // Aquí se crea el enlace
