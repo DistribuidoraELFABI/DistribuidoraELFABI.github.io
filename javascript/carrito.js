@@ -240,3 +240,19 @@ window.cambiarValor = function(valor) {
         input.value = nuevoValor;
     }
 }
+
+window.cambiarValor= function(cambio, boton) {
+    // Encuentra el contenedor más cercano (el div con clase 'contador')
+    const contenedor = boton.closest('.contador');
+    
+    // Encuentra el input dentro del contenedor
+    const input = contenedor.querySelector('.cantidad');
+    
+    // Modifica el valor del input
+    let nuevoValor = parseInt(input.value) + cambio;
+    
+    // Asegúrate de que el valor no sea menor que 1
+    if (nuevoValor >= 1) {
+        input.value = nuevoValor;
+    }
+}
