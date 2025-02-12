@@ -17,15 +17,40 @@ html{
 :root{
     --mi-borde: solid 1px red;
 }
+.menu{
+    display: none;
+}
+/* Colores generales */
+body {
+    background-color: #d7e1f0; /* Fondo claro, fresco y suave */
+}
+
+header {
+    background-color: #2980b9; /* Azul más profundo para el header, creando un contraste con el fondo */
+    border-radius: 18px; /* Bordes redondeados */
+    margin: 1rem auto; /* Margen automático para centrar el header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+    width: 96%; /* Ajustar el ancho del header al 90% de su contenedor */
+    display: flex; /* Usar flexbox para alineación de los elementos dentro */
+}
+
+footer {
+    background-color: #3498db; /* Azul brillante para el footer */
+    color: white; /* Texto blanco para contraste con el fondo azul */
+    text-align: center; /* Centrar el texto dentro del footer */
+    border-radius: 18px; /* Bordes redondeados para un acabado suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+    margin-top: 2rem; /* Espaciado superior para separar del contenido principal */
+}
+
+/* end colores generales */
 body{
     width: 98vw;
     height: 98vh;
     margin: auto;
-    border: solid 1px red;
-    background-color: #131212;
 
     display:grid;
-    gap: 10px;
+    gap: 5px;
     grid-template-areas:
     "header"
     "main"
@@ -33,26 +58,72 @@ body{
     grid-template-rows: auto 1fr auto;
 }
 header{
-    border: solid 1px green;
     grid-area: header;
     
 }
 main{
-    border: solid 1px rgb(214, 139, 26);
 
     grid-area: main;
     display: grid;
     
 }
-.contador {
-        border: solid 1px green;
+/* header */
+/* Estilo global para el nav */
+.barNav{
+    box-shadow: 0 8px 6px rgba(0, 0, 0, 0.1); /* Agregar sombra suave */
 
-        margin: 0;
+}
+.logo {
+    margin: 0;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+}
+
+.logo h1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0.5rem 0;
+    letter-spacing: 0.08rem;
+}
+
+.logo p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0;
     padding: 0;
-    background-color: red;
+    opacity: 0.8;
+}
+
+.logo p a {
+    color: #fff; /* Mantiene el color blanco */
+    text-decoration: none; /* Elimina el subrayado */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.logo p a:hover {
+    color: #25D366; /* Color verde de WhatsApp al pasar el mouse */
+}
 
 
+/* estilo menu-toggle */
+    .menu-toggle{
+        font-size: 1.5rem; /* Tamaño grande para pantallas grandes */
+        font-weight: bold;
+        color: white;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
 
+
+    }
+/* end menu toogle */
+/* end header */
+.contador {
+    margin: 0;
+    padding: 0;
+    max-width: auto;
 }
 .contador button {
     width: 1.9em;
@@ -63,11 +134,14 @@ main{
     color: white;
     cursor: pointer;
     margin: 0 5px;
+    padding: 0;
     border-radius: 30%;
 }
 .contador input {
-    width: 50px;
+    width: 2rem;
     text-align: center;
+    padding: 0;
+    margin: 0;
 }
 section{
     gap:5px;
@@ -76,48 +150,52 @@ section{
     grid-template-columns: repeat(auto-fit, minmax(256px,1fr));
 }
 /* carrito de compras */
-.carrito-detalles{    
-border-radius: 5px;
+    .carrito-detalles{    
+    border-radius: 5px;
 
-    position:fixed;
-    z-index:998;
-    margin:0;
-    width: 95%;
-    background-color: rgba(165, 165, 165, 0.248);
-    transition: transform .6s ease;
-    transform: translate(0,-1050%);
-    
-}
-.carrito-detalles.is-active{
-    transform: translate(0,0);
-}
-.forma-carrito{
-    font-size: 1.5rem;
-    padding: 0;
-    margin: 0;
-    height: 70%;
-}
-.menu-div{
-    border: solid 2px rgba(5, 5, 5, 0.581);
-    /* width: 100%; */
+        position:fixed;
+        z-index:998;
+        margin:0;
+        width: 95%;
+        background-color: rgba(165, 165, 165, 0.248);
+        transition: transform .6s ease;
+        transform: translate(0,-1050%);
+        
+    }
+    .carrito-detalles.is-active{
+        transform: translate(0,0);
+    }
+    .forma-carrito{
+        font-size: 1.5rem;
+        padding: 0;
+        margin: 0;
+        height: 70%;
+    }
+    .menu-div{
+        /* width: 100%; */
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-}
-ul#lista-productos{
-    border: var(--mi-borde);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+    }
+    ul#lista-productos{
+        max-height: 300px; /* Ajusta la altura máxima según lo que necesites */
+        overflow-y: auto; /* Permite el scroll vertical */
+        padding: 0;
+        margin: 0;
+        list-style: none; /* Elimina los puntos de la lista */
 
-    display: flex;
-    flex-direction: column;
-}
-.totalSp{
-    font-size: 1.2rem;
-    color: #131212;
+        display: flex;
+        flex-direction: column;
+    }
+    .totalSp{
+        font-size: 1.2rem;
+        color: #131212;
 
-}
+    }
+/* end carriot de compras */
 /* Estilos generales para la tabla */
 #tabla-carrito {
     width: 100%;
@@ -155,10 +233,12 @@ ul#lista-productos{
 
 /* Botón eliminar */
 .eliminar-producto {
+    font-size: .5rem;
+    margin: 0;
+    padding: 0.8px;
     background-color: #e74c3c; /* Rojo */
     color: white;
     border: none;
-    padding: 6px 10px;
     cursor: pointer;
     border-radius: 4px;
     transition: background 0.3s;
@@ -170,14 +250,15 @@ ul#lista-productos{
 
 /* Estilos del total */
 #total-carrito {
-    font-size: 18px;
+    background-color: #fdfffe;
+    font-size: 1em;
     font-weight: bold;
     text-align: right;
     margin-top: 10px;
 }
 
 #total-carrito-valor {
-    color: #4ca72b; /* Verde para el total */
+    color: #459927; /* Verde para el total */
     padding-left: 10px;
 }
 
@@ -185,7 +266,6 @@ ul#lista-productos{
 /* termina carrito */
 .producto{
     gap:5px;
-    border: solid 3px rgb(120, 244, 11);
     
     display: flex;
     flex-direction: column;
@@ -200,13 +280,14 @@ ul#lista-productos{
     align-items: center;
 }
 .producto-img{
+    width: 50px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .agregar-quitar{
-    border: solid 2px yellow;
     width: 80%;
     display: flex;
     justify-content: space-around;
@@ -239,32 +320,11 @@ ul#lista-productos{
         transform: translateY(2px); /* Efecto de presión al hacer click */
     }
 /* Estilo para el botón de quitar */
-.quitar {
-    background-color: #e74c3c; /* Rojo para un efecto de advertencia */
-    color: white;
-    font-size: 1.1rem;
-    font-weight: bold;
-    padding: 3px 10px;
-    border: none;
-    border-radius: 30px; /* Bordes redondeados */
-    cursor: pointer;
-    transition: all 0.3s ease-in-out; /* Transición suave */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
 
-.quitar:hover {
-    background-color: #c0392b; /* Rojo más oscuro al pasar el mouse */
-    transform: translateY(-3px); /* Efecto de elevación */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Más sombra al hacer hover */
-}
+/* estilos nuevo div */
 
-.quitar:active {
-    transform: translateY(2px); /* Efecto de presión al hacer click */
-}
+/* terminan nuevos estilos */
+
     .icono-carrito {
         font-size: 1.4rem; /* Tamaño del carrito */
         margin-left: 8px; /* Espacio entre texto y el ícono */
@@ -277,13 +337,20 @@ input{
     text-align: center;
     gap: 5px;
 }
+
+/* contendor producto */
+.producto{
+        background-color: rgba(0, 0, 0, 0.664);
+        border: solid 2px #131212;
+        border-radius: 15px;
+    }
+/* end contenedor prodcuto */
 footer{
-    border: solid 1px green;
 
     grid-area: footer;
 }
 nav{
-    background-color: rgba(41, 42, 40, 0.846);
+    /* background-color: rgba(41, 42, 40, 0.846); */
     width: 100%;
 
     display: grid;
@@ -296,24 +363,57 @@ nav{
     grid-area: logo;
 }
 .menu-toggle{
-    border: solid 3px rgb(235, 226, 226);
     width: 100%;
+    border-radius: 15px;
 
     grid-area: menu-toggle;
     display: flex;
     justify-content: center;
-
+    align-items: center;
 }
+/* menu li nav */
+.nav-links{
+    background-color: rgba(255, 255, 255, 0.508);
+}
+.menu-toggle ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 0;
+    gap: 1rem; /* Espacio entre los elementos */
+}
+
+.menu-toggle ul li a {
+    color: white;
+    border-radius: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-toggle ul li a:hover {
+    color: black; /* Azul para el hover */
+    transform: scale(1.1);
+}
+
+
+.menu-toggle ul li a {
+    color: white; /* Color blanco para el texto dentro del enlace */
+    text-decoration: none; /* Elimina el subrayado */
+}
+.menu-toggle li:hover {
+    cursor: pointer;
+}
+
+/*  end menu li nav*/
 .cart{
     background-color:blue;
-    border: solid 1px yellow;
 
     grid-area: cart;
     display: flex;
     justify-content: center !important;
 }
 svg{
-    background-color: brown;
+    background-color: rgb(50, 33, 244);
     margin-right: 20px;
     width: 40px; /* Ancho del ícono */
     height: 40px; /* Alto del ícono */
@@ -324,7 +424,6 @@ svg{
 ul{
     
     width: 90%;
-    border: solid 1px red;
     display: inherit;
     justify-content: space-around;
 
@@ -334,7 +433,6 @@ li, a{
     list-style: none;
 }
 .letra-img{
-    border: solid 3px violet ;
     position: relative;
     height: 100;
     display: flex;
@@ -343,8 +441,10 @@ li, a{
 }
 .producto-img{
     display: block;
-    width: 100%;
-    height: 100%;
+    margin: auto;
+    width: 95%;
+    height: 98%;
+    
 }
 .titulo{
     position: absolute;
@@ -366,14 +466,13 @@ li, a{
 .letreros{
     color: white;
     font-weight: bold; /* Negrita */
-    font-size: calc(1px + 1vw); /* Ajusta el tamaño dinámicamente */
+    font-size: calc(7px + 1vw); /* Ajusta el tamaño dinámicamente */
     text-align: center;
     word-wrap: break-word; /* Divide el texto en varias líneas si es necesario */
 
     background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
 }
 span{
-    /* border: solid 3px #3498db; */
     font-size: auto;
 }
 .precio {
@@ -382,7 +481,7 @@ span{
     position: absolute;
     
     top: 20%; /* Ajusta a la mitad del contenedor */
-    left: 80%; /* Ajusta al centro horizontal */
+    left: 70%; /* Ajusta al centro horizontal */
 
     width: auto;
     height: auto;
@@ -413,7 +512,7 @@ span{
 
 .letreros{
     width: 100% !important;
-    border: var(--mi-borde);
+    /* font-size: 1.5em; */
 }
 .titulo{
     width: 100%;
@@ -422,11 +521,144 @@ span{
 .letra-img{
     width: 100%;
 }
+.cart {
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    z-index: 1020;
+    background-color: #34db5b; /* Azul suave */
+    color: white;
+    padding: 1rem;
+    border-radius: 40%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.cart:hover {
+    background-color: #c5d1d8; /* Azul más oscuro */
+    transform: scale(1.1);
+}
+
+.cart i {
+    font-size: 1.5rem;
+}
+/* scroll carrito */
+
+/* end scroll carrito */
+
+/* Ajustes para pantallas pequeñas (<= 390px) */
+/* Reducción del tamaño de fuente en la tabla */
+#tabla-carrito {
+    font-size: 0.6rem; /* Reducir el tamaño de la fuente */
+}
+
+/* Celdas del encabezado */
+#tabla-carrito th {
+    padding: 7px; /* Menos espacio en el encabezado */
+    word-wrap: break-word;
+    min-width: 10px; /* Forzar un ancho mínimo */
+    max-width: 85px;
+}
+
+/* Celdas del cuerpo */
+#tabla-carrito td {
+    padding: 4px; /* Reducir el padding de las celdas */
+    word-wrap: break-word;
+    min-width: 1px; /* Forzar un ancho mínimo */
+    max-width: 65px;
+}
+#tabla-carrito td input{
+    margin: 0;
+    padding: 0;
+    max-width: 25px;
+}
+
+/* Ajuste de la tabla para que no se desborde */
+.carrito-detalles {
+    width: 90%; /* Reducir el ancho del contenedor */
+}
+
+#tabla-carrito {
+    width: 90%; /* Asegurar que la tabla ocupe el 100% del ancho */
+}
+
+.totalSp {
+    font-size: 1rem; /* Reducir tamaño del texto en el total */
+}
+
+section{
+    gap: 5px;
+}
+/* agrandar imagen */
+/* Estilo del modal */
+/* Estilos del modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: hidden;
+
+}
+
+.modal-img {
+    width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+.modal-text {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    color: white;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+
+    display: flex;
+    justify-content: space-around;    
+
+}
 
 
+.modal-title {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
 
-@media (max-width:625px){
-    .logo>h2{
+    
+}
+
+.modal-description {
+    display: block;
+}
+
+
+/* end agrandar imagen */
+@media (max-width:425px){
+    .logo>h1, .logo>p{
         display:none;
     }
     /* .cart{
@@ -439,7 +671,6 @@ span{
         display: none;
     }
     main{
-        border: solid 3px red;
 
         display: grid;
         grid-template-rows: auto 1fr auto;
@@ -451,7 +682,6 @@ span{
 
 
     .contenido{
-        border: solid 1px green;
 
         grid-area: contenido;
     }
@@ -464,8 +694,8 @@ span{
 
     }
     ul{
-        border: solid 1px green;
-        width: 100%;
+        width: 70%;
+        background-color: none;
         grid-area: menu;
         display: grid;
         grid-template-columns: 1fr 2rf 1rf;
@@ -483,19 +713,23 @@ span{
     #menu2{
         grid-area: menu2;
     }
-    .menu>ul>li>a {
+    .menu-toggle>ul{
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .menu-toggle>ul>li>a {
         display: inline-block; /* Para que se comporten como botones */
-        margin: 10px 0; /* Espacio entre los botones */
-        padding: 10px 20px; /* Relleno dentro del botón */
+        justify-content: space-around;
         background-color: #808080; /* Color de fondo */
+        margin:auto;
         color: white; /* Color del texto */
         text-align: center; /* Centra el texto */
         text-decoration: none; /* Quita el subrayado */
         border-radius: 5px; /* Bordes redondeados */
-        font-size: 16px; /* Tamaño de la fuente */
+        font-size: 1rem; /* Tamaño de la fuente */
         font-weight: bold; /* Para darle más grosor al texto */
         text-shadow: 2px 2px 3px black, -1px -1px 3px black, 1px -1px 3px black, -1px 1px 3px black, 1px 1px 3px black; /* Contorno negro */
         transition: background-color 0.3s ease;
+
     }
     
     .menu>ul>li>a:hover {
@@ -524,7 +758,6 @@ span{
 
     .contenido{
         background-color: rgba(20, 20, 20, 0.72);
-        border: solid 2px black;
 
 
         display: flex;
@@ -539,8 +772,6 @@ span{
         text-align: center;
     }
     .producto{
-        background-color: rgb(18, 18, 18);
-        border: solid 2px black;
 
         display: flex;
         flex-direction: column;
@@ -611,34 +842,62 @@ span{
     }
 
     .cart {
-        position: fixed !important;
-        top: 1rem !important;
-        right: 2rem !important;
-        z-index: 1020 !important;
-        background-color: #2beb28; /* Color de fondo opcional */
-        color: white; /* Color del icono */
-        padding: 0 !important;
-        border-radius: 10%;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        position: fixed;
+        top: 0.5rem;
+        right: 1rem;
+        z-index: 1020;
+        background-color: #34db5b; /* Azul suave */
+        color: white;
+        padding: 0.8rem;
+        border-radius: 40%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s ease, transform 0.2s ease-in-out;
+        cursor: pointer;
+    }
+    
+    .cart:hover {
+        background-color: #c5d1d8; /* Azul más oscuro */
+        transform: scale(1.1);
+    }
+    
+    .cart i {
+        font-size: 1.5rem;
     }
 /* Ajustes para pantallas pequeñas (<= 390px) */
     /* Reducción del tamaño de fuente en la tabla */
+    .carrito-detalles {
+        max-height: 70vh; /* Limitar la altura */
+        overflow-y: auto; /* Permitir el scroll vertical */
+        display: block; /* Asegura que se comporta como un bloque */
+        margin-top: 3rem;
+    }
+    
     #tabla-carrito {
-        font-size: 0.8rem; /* Reducir el tamaño de la fuente */
+        font-size: 0.6rem; /* Reducir el tamaño de la fuente */
     }
 
     /* Celdas del encabezado */
     #tabla-carrito th {
-        padding: 8px; /* Menos espacio en el encabezado */
+        padding: 7px; /* Menos espacio en el encabezado */
         word-wrap: break-word;
-        min-width: 50px; /* Forzar un ancho mínimo */
+        min-width: 10px; /* Forzar un ancho mínimo */
+        max-width: 85px;
     }
 
     /* Celdas del cuerpo */
     #tabla-carrito td {
         padding: 4px; /* Reducir el padding de las celdas */
         word-wrap: break-word;
-        min-width: 50px; /* Forzar un ancho mínimo */
+        min-width: 1px; /* Forzar un ancho mínimo */
+        max-width: 65px;
+    }
+    #tabla-carrito td input{
+        margin: 0;
+        padding: 0;
+        max-width: 25px;
     }
 
     /* Ajuste de la tabla para que no se desborde */
@@ -647,7 +906,7 @@ span{
     }
 
     #tabla-carrito {
-        width: 100%; /* Asegurar que la tabla ocupe el 100% del ancho */
+        width: 90%; /* Asegurar que la tabla ocupe el 100% del ancho */
     }
 
     .totalSp {
@@ -677,21 +936,21 @@ span{
         word-wrap: break-word;
         max-width: 100px; /* Limitar el ancho máximo de las celdas */
     }
-        .contador{
+    .contador{
         margin: 0;
         padding: 0;
-    
+
+    }
     .contador button {
-        min-width: 10px
-        
+    min-width: 10px;
         margin: 0 5px;
         padding: 0;
-
     }
     .contador input{
         margin: 0;
         padding: 0;
     }
+
 }
 
 
