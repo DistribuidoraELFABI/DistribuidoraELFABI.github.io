@@ -11,15 +11,16 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="barNav">
             <div class="logo">
-                <h2 class="responsive-hidden">Distribuidora ELFABI</h2>
+                <h1 class="responsive-hidden">Distribuidora ELFABI</h1>
+                <p><a href="https://wa.me/593962735406" target="_blank">WhatsApp: 0962735406</a></p>
             </div>
             <div class="menu-toggle" id="menu-toggle">
                 <ul class="nav-links" id="nav-links">
-                    <li><a href="inde2x.css"></a>Inicio</li>
-                    <li><a href="catalogo.html"></a>Catálogo</li>
-                    <li><a href="contactos.html"></a>Contactos</li>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
                 </ul>
             </div>
             <!-- Carrito -->
@@ -60,15 +61,15 @@
     </header>
     <main>
         <div class="contenido">
-             <!-- Guantes -->
-        <section id="guantes">
-
-<!-- Código HTML corregido -->
+        <!--Aquí empieza el catálogo  -->
+            <!-- Sección de Guantes -->
+        <section id="guanteslatex">
+            <!--Guantes de Látex  -->
             <div class="producto">
                 <div class="letra-img">
                     <img src="./img/GUANTES LATEX L.jpg" alt="Guantes de manejo de látex talla S" class="producto-img">
                     <div class="titulo">
-                        <span class="titulo-producto letreros" id="nombreproducto1">Guantes Latex Talla S</span>
+                        <span class="letreros" id="nombreproducto1">Guantes Latex Talla S</span>
                         <span class="titulo-cantidad letreros" id="descripcionproducto1">Caja de 100 unidades</span>
                     </div>
                     <div class="etiqueta-price">
@@ -77,862 +78,703 @@
                 </div>
                 <div class="producto-info">
                     <div class="contador">
-                        <button onclick="cambiarValor(-1)">-</button>
+                        <button onclick="cambiarValor(-1,this)">-</button>
                         <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto1">
-                        <button onclick="cambiarValor(1)">+</button>
+                        <button onclick="cambiarValor(1,this)">+</button>
                     </div>
                     <div class="agregar-quitar">
                         <button class="agregar" onclick="agregarAlCarrito('Guante de látex talla S', 'Caja de 100 unidades', 'cantidadproducto1', 6.50)">Agregar &#x1F6D2;</button>
                     </div>
                 </div>
             </div>
-                        
             <div class="producto">
                 <div class="letra-img">
-                    <img src="./img/GUANTES LATEX L.jpg" alt="Guantes de manejo de látex talla M" class="producto-img">
+                    <img src="./img/GUANTES LATEX L.jpg" alt="Guantes de manejo de látex talla M" class="producto-img"><!-- cambiar texto alternativo -->
                     <div class="titulo">
-                        <span class="titulo-producto letreros" id="nombreproducto1">Guantes Latex Talla S</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto1">Caja de 100 unidades</span>
+                        <span class="titulo-producto letreros" id="nombreproducto2">Guantes Latex Talla M</span>
+                        <span class="titulo-cantidad letreros" id="descripcionproducto2">Caja de 100 unidades</span>
                     </div>
                     <div class="etiqueta-price">
                         <p class="precio" >$6.<span class="decimales">50</span></p>
                     </div>
                 </div>
                 <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto2">
+                    <div class="contador">
+                        <button onclick="cambiarValor(-1,this)">-</button>
+                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto2">
+                        <button onclick="cambiarValor(1,this)">+</button>
+                    </div>
                     <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito(5)">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Guante de látex talla M', 'Caja de 100 unidades', 'cantidadproducto2', 6.50)">+ &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Guante de látex talla M', 'Caja de 100 unidades', 'cantidadproducto2', 6.50)">Agregar &#x1F6D2;</button>
                     </div>
                 </div>
             </div>
             <div class="producto">
                 <div class="letra-img">
                     <img src="./img/GUANTES LATEX L.jpg" alt="Guantes de manejo de látex talla L" class="producto-img">
-                    <div class="titulo" id="nombreproducto3">
+                    <div class="titulo">
                         <span class="titulo-producto letreros" id="nombreproducto3">Guantes Latex Talla L</span>
                         <span class="titulo-cantidad letreros" id="descripcionproducto3">Caja de 100 unidades</span>
                     </div>
                     <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto3">$6.<span class="decimales">50</span></p>
+                        <p class="precio">$6.<span class="decimales">50</span></p>
                     </div>
                 </div>
                 <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto3">
+                    <div class="contador">
+                        <button onclick="cambiarValor(-1,this)">-</button>
+                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto3">
+                        <button onclick="cambiarValor(1,this)">+</button>
+                    </div>
                     <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Guante de látex talla L', 12.99, 'cantidad-guante3')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Guante de látex talla L', 12.99, 'cantidad-guante3')">+ &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Guante de látex talla L', 'Caja de 100 unidades', 'cantidadproducto3', 6.50)">Agregar &#x1F6D2;</button>
                     </div>
                 </div>
             </div>
-            
-                        <!-- Guantes de nitrilo -->
-<div class="producto">
-    <div class="letra-img">
-        <img src="./img/Guantes-de-Nitrilo-Negro.jpg" alt="Guantes de nitrilo talla S" class="producto-img">
-        <div class="titulo" id="nombreproducto4">
-            <span class="titulo-producto letreros" id="nombreproducto4">Guantes Nitrilo Talla S</span>
-            <span class="titulo-cantidad letreros" id="descripcionproducto4">Caja de 100 unidades</span>
-        </div>
-        <div class="etiqueta-price">
-            <p class="precio" id="cantidadproducto4">$8.<span class="decimales">50</span></p>
-        </div>
-    </div>
-    <div class="producto-info">
-        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto4">
-        <div class="agregar-quitar">
-            <button class="quitar" onclick="quitarDelCarrito('Guante de nitrilo talla S', 8.50, 'cantidad-guante4')">- &#x1F6D2;</button>
-            <button class="agregar" onclick="agregarAlCarrito('Guante de nitrilo talla S', 8.50, 'cantidad-guante4')">+ &#x1F6D2;</button>
-        </div>
-    </div>
-</div>
+        </section>
+        <section id="guantesnitrilo">
+            <!-- Guantes de Nitrilo Talla S -->
+            <div class="producto">
+                <div class="letra-img">
+                    <img src="./img/Guantes-de-Nitrilo-Negro.jpg" alt="Guantes de nitrilo talla S" class="producto-img">
+                    <div class="titulo">
+                        <span class="titulo-producto letreros" id="nombreproducto4">Guantes Nitrilo Talla S</span>
+                        <span class="titulo-cantidad letreros" id="descripcionproducto4">Caja de 100 unidades</span>
+                    </div>
+                    <div class="etiqueta-price">
+                        <p class="precio">$8.<span class="decimales">50</span></p>
+                    </div>
+                </div>
+                <div class="producto-info">
+                    <div class="contador">
+                        <button onclick="cambiarValor(-1,this)">-</button>
+                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto4">
+                        <button onclick="cambiarValor(1,this)">+</button>
+                    </div>
+                    <div class="agregar-quitar">
+                        <button class="agregar" onclick="agregarAlCarrito('Guante de nitrilo talla S', 'Caja de 100 unidades', 'cantidadproducto4', 8.50)">Agregar &#x1F6D2;</button>
+                    </div>
+                </div>
+            </div>
 
-<div class="producto">
-    <div class="letra-img">
-        <img src="./img/Guantes-de-Nitrilo-Negro.jpg" alt="Guantes de nitrilo talla M" class="producto-img">
-        <div class="titulo" id="nombreproducto5">
-            <span class="titulo-producto letreros" id="nombreproducto5">Guantes Nitrilo Talla M</span>
-            <span class="titulo-cantidad letreros" id="descripcionproducto5">Caja de 100 unidades</span>
-        </div>
-        <div class="etiqueta-price">
-            <p class="precio" id="cantidadproducto5">$8.<span class="decimales">50</span></p>
-        </div>
-    </div>
-    <div class="producto-info">
-        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto5">
-        <div class="agregar-quitar">
-            <button class="quitar" onclick="quitarDelCarrito('Guante de nitrilo talla M', 8.50, 'cantidad-guante5')">- &#x1F6D2;</button>
-            <button class="agregar" onclick="agregarAlCarrito('Guante de nitrilo talla M', 8.50, 'cantidad-guante5')">+ &#x1F6D2;</button>
-        </div>
-    </div>
-</div>
+            <!-- Guantes de Nitrilo Talla M -->
+            <div class="producto">
+                <div class="letra-img">
+                    <img src="./img/Guantes-de-Nitrilo-Negro.jpg" alt="Guantes de nitrilo talla M" class="producto-img">
+                    <div class="titulo">
+                        <span class="titulo-producto letreros" id="nombreproducto5">Guantes Nitrilo Talla M</span>
+                        <span class="titulo-cantidad letreros" id="descripcionproducto5">Caja de 100 unidades</span>
+                    </div>
+                    <div class="etiqueta-price">
+                        <p class="precio">$8.<span class="decimales">50</span></p>
+                    </div>
+                </div>
+                <div class="producto-info">
+                    <div class="contador">
+                        <button onclick="cambiarValor(-1,this)">-</button>
+                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto5">
+                        <button onclick="cambiarValor(1,this)">+</button>
+                    </div>
+                    <div class="agregar-quitar">
+                        <button class="agregar" onclick="agregarAlCarrito('Guante de nitrilo talla M', 'Caja de 100 unidades', 'cantidadproducto5', 8.50)">Agregar &#x1F6D2;</button>
+                    </div>
+                </div>
+            </div>
 
-<div class="producto">
-    <div class="letra-img">
-        <img src="./img/Guantes-de-Nitrilo-Negro.jpg" alt="Guantes de nitrilo talla L" class="producto-img">
-        <div class="titulo" id="nombreproducto6">
-            <span class="titulo-producto letreros" id="nombreproducto6">Guantes Nitrilo Talla L</span>
-            <span class="titulo-cantidad letreros" id="descripcionproducto6">Caja de 100 unidades</span>
-        </div>
-        <div class="etiqueta-price">
-            <p class="precio" id="cantidadproducto6">$8.<span class="decimales">50</span></p>
-        </div>
-    </div>
-    <div class="producto-info">
-        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto6">
-        <div class="agregar-quitar">
-            <button class="quitar" onclick="quitarDelCarrito('Guante de nitrilo talla L', 8.50, 'cantidad-guante6')">- &#x1F6D2;</button>
-            <button class="agregar" onclick="agregarAlCarrito('Guante de nitrilo talla L', 8.50, 'cantidad-guante6')">+ &#x1F6D2;</button>
-        </div>
-    </div>
-</div>
-
-            <!-- Guantes Estériles -->
+            <!-- Guantes de Nitrilo Talla L -->
+            <div class="producto">
+                <div class="letra-img">
+                    <img src="./img/Guantes-de-Nitrilo-Negro.jpg" alt="Guantes de nitrilo talla L" class="producto-img">
+                    <div class="titulo">
+                        <span class="titulo-producto letreros" id="nombreproducto6">Guantes Nitrilo Talla L</span>
+                        <span class="titulo-cantidad letreros" id="descripcionproducto6">Caja de 100 unidades</span>
+                    </div>
+                    <div class="etiqueta-price">
+                        <p class="precio">$8.<span class="decimales">50</span></p>
+                    </div>
+                </div>
+                <div class="producto-info">
+                    <div class="contador">
+                        <button onclick="cambiarValor(-1,this)">-</button>
+                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto6">
+                        <button onclick="cambiarValor(1,this)">+</button>
+                    </div>
+                    <div class="agregar-quitar">
+                        <button class="agregar" onclick="agregarAlCarrito('Guante de nitrilo talla L', 'Caja de 100 unidades', 'cantidadproducto6', 8.50)">Agregar &#x1F6D2;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="guantesquirurgicos">
+            <!-- Guantes Quirúrgicos Estériles Talla 6.5 -->
             <div class="producto">
                 <div class="letra-img">
                     <img src="./img/guantesesteril.jpg" alt="Guantes quirúrgicos estériles talla 6.5" class="producto-img">
-                    <div class="titulo" id="nombreproducto7">
-                        <span class="titulo-producto letreros" id="nombreproducto7">Guantes Quirúrgicos Estériles Talla 6.5</span>
+                    <div class="titulo">
+                        <span class="titulo-producto letreros" id="nombreproducto7">Guantes Quirúrgicos Talla 6.5</span>
                         <span class="titulo-cantidad letreros" id="descripcionproducto7">Caja de 50 pares</span>
                     </div>
                     <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto7">$30.<span class="decimales">00</span></p>
+                        <p class="precio">$32.<span class="decimales">00</span></p>
                     </div>
                 </div>
                 <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto7">
+                    <div class="contador">
+                        <button onclick="cambiarValor(-1,this)">-</button>
+                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto7">
+                        <button onclick="cambiarValor(1,this)">+</button>
+                    </div>
                     <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Guante quirúrgico estéril talla 6.5', 30.00, 'cantidad-guante7')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Guante quirúrgico estéril talla 6.5', 30.00, 'cantidad-guante7')">+ &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Guante Quirúrgico Talla 6.5', 'Caja de 50 pares', 'cantidadproducto7', 32.00)">Agregar &#x1F6D2;</button>
                     </div>
                 </div>
             </div>
-            
+
+            <!-- Guantes Quirúrgicos Estériles Talla 7 -->
             <div class="producto">
                 <div class="letra-img">
                     <img src="./img/guantesesteril.jpg" alt="Guantes quirúrgicos estériles talla 7" class="producto-img">
-                    <div class="titulo" id="nombreproducto8">
-                        <span class="titulo-producto letreros" id="nombreproducto8">Guantes Quirúrgicos Estériles Talla 7</span>
+                    <div class="titulo">
+                        <span class="titulo-producto letreros" id="nombreproducto8">Guantes Quirúrgicos Talla 7</span>
                         <span class="titulo-cantidad letreros" id="descripcionproducto8">Caja de 50 pares</span>
                     </div>
                     <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto8">$30.<span class="decimales">00</span></p>
+                        <p class="precio">$32.<span class="decimales">00</span></p>
                     </div>
                 </div>
                 <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto8">
+                    <div class="contador">
+                        <button onclick="cambiarValor(-1,this)">-</button>
+                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto8">
+                        <button onclick="cambiarValor(1,this)">+</button>
+                    </div>
                     <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Guante quirúrgico estéril talla 7', 30.00, 'cantidad-guante8')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Guante quirúrgico estéril talla 7', 30.00, 'cantidad-guante8')">+ &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Guante Quirúrgico Talla 7', 'Caja de 50 pares', 'cantidadproducto8', 32.00)">Agregar &#x1F6D2;</button>
                     </div>
                 </div>
             </div>
-            
+
+            <!-- Guantes Quirúrgicos Estériles Talla 7.5 -->
             <div class="producto">
                 <div class="letra-img">
                     <img src="./img/guantesesteril.jpg" alt="Guantes quirúrgicos estériles talla 7.5" class="producto-img">
-                    <div class="titulo" id="nombreproducto9">
-                        <span class="titulo-producto letreros" id="nombreproducto9">Guantes Quirúrgicos Estériles Talla 7.5</span>
+                    <div class="titulo">
+                        <span class="titulo-producto letreros" id="nombreproducto9">Guantes Quirúrgicos Talla 7.5</span>
                         <span class="titulo-cantidad letreros" id="descripcionproducto9">Caja de 50 pares</span>
                     </div>
                     <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto9">$30.<span class="decimales">00</span></p>
+                        <p class="precio">$32.<span class="decimales">00</span></p>
                     </div>
                 </div>
                 <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto9">
+                    <div class="contador">
+                        <button onclick="cambiarValor(-1,this)">-</button>
+                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto9">
+                        <button onclick="cambiarValor(1,this)">+</button>
+                    </div>
                     <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Guante quirúrgico estéril talla 7.5', 30.00, 'cantidad-guante9')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Guante quirúrgico estéril talla 7.5', 30.00, 'cantidad-guante9')">+ &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Guante Quirúrgico Talla 7.5', 'Caja de 50 pares', 'cantidadproducto9', 32.00)">Agregar &#x1F6D2;</button>
                     </div>
                 </div>
             </div>
-            
+
+            <!-- Guantes Quirúrgicos Estériles Talla 8 -->
             <div class="producto">
                 <div class="letra-img">
                     <img src="./img/guantesesteril.jpg" alt="Guantes quirúrgicos estériles talla 8" class="producto-img">
-                    <div class="titulo" id="nombreproducto10">
-                        <span class="titulo-producto letreros" id="nombreproducto10">Guantes Quirúrgicos Estériles Talla 8</span>
+                    <div class="titulo">
+                        <span class="titulo-producto letreros" id="nombreproducto10">Guantes Quirúrgicos Talla 8</span>
                         <span class="titulo-cantidad letreros" id="descripcionproducto10">Caja de 50 pares</span>
                     </div>
                     <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto10">$30.<span class="decimales">00</span></p>
+                        <p class="precio">$32.<span class="decimales">00</span></p>
                     </div>
                 </div>
                 <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto10">
+                    <div class="contador">
+                        <button onclick="cambiarValor(-1,this)">-</button>
+                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto10">
+                        <button onclick="cambiarValor(1,this)">+</button>
+                    </div>
                     <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Guante quirúrgico estéril talla 8', 30.00, 'cantidad-guante10')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Guante quirúrgico estéril talla 8', 30.00, 'cantidad-guante10')">+ &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Guante Quirúrgico Talla 8', 'Caja de 50 pares', 'cantidadproducto10', 32.00)">Agregar &#x1F6D2;</button>
                     </div>
                 </div>
             </div>
-            
+
+            <!-- Guantes Quirúrgicos Estériles Talla 8.5 -->
             <div class="producto">
                 <div class="letra-img">
                     <img src="./img/guantesesteril.jpg" alt="Guantes quirúrgicos estériles talla 8.5" class="producto-img">
-                    <div class="titulo" id="nombreproducto11">
-                        <span class="titulo-producto letreros" id="nombreproducto11">Guantes Quirúrgicos Estériles Talla 8.5</span>
+                    <div class="titulo">
+                        <span class="titulo-producto letreros" id="nombreproducto11">Guantes Quirúrgicos Talla 8.5</span>
                         <span class="titulo-cantidad letreros" id="descripcionproducto11">Caja de 50 pares</span>
                     </div>
                     <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto11">$30.<span class="decimales">00</span></p>
+                        <p class="precio">$32.<span class="decimales">00</span></p>
                     </div>
                 </div>
                 <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto11">
+                    <div class="contador">
+                        <button onclick="cambiarValor(-1,this)">-</button>
+                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto11">
+                        <button onclick="cambiarValor(1,this)">+</button>
+                    </div>
                     <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Guante quirúrgico estéril talla 8.5', 30.00, 'cantidad-guante11')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Guante quirúrgico estéril talla 8.5', 30.00, 'cantidad-guante11')">+ &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Guante Quirúrgico Talla 8.5', 'Caja de 50 pares', 'cantidadproducto11', 32.00)">Agregar &#x1F6D2;</button>
                     </div>
                 </div>
             </div>
-            
-            <!-- borrar -->
         </section>
-
-        <!-- Hilos de sutura -->
-        <section id="hilos-sutura">
-
-            <!-- Producto en Hilos de Sutura -->
+        <section id="suturasnylon">
             <div class="producto">
                 <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 2-0" class="producto-img">
-                    <div class="titulo" id="nombreproducto12">
-                        <span class="titulo-producto letreros" id="nombreproducto12">Hilo de Sutura Nylon 2-0</span>
+                    <img src="./img/nylonhtml.jpg" alt="Sutura Nylon 2-0" class="producto-img">
+                    <div class="titulo">
+                        <span class="titulo-producto letreros" id="nombreproducto12">Sutura Nylon 2-0</span>
                         <span class="titulo-cantidad letreros" id="descripcionproducto12">Caja de 36 unidades</span>
                     </div>
                     <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto12">$48.<span class="decimales">00</span></p>
+                        <p class="precio">$48.<span class="decimales">00</span></p>
                     </div>
                 </div>
                 <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto12">
+                    <div class="contador">
+                        <button onclick="cambiarValor(-1,this)">-</button>
+                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto12">
+                        <button onclick="cambiarValor(1,this)">+</button>
+                    </div>
                     <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 2-0', 48.00, 'cantidad-hilo12')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 2-0', 48.00, 'cantidad-hilo12')">+ &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Sutura Nylon 2-0', 'Caja de 36 unidades', 'cantidadproducto12', 48.00)">Agregar &#x1F6D2;</button>
                     </div>
                 </div>
             </div>
             
             <div class="producto">
                 <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 3-0" class="producto-img">
-                    <div class="titulo" id="nombreproducto13">
-                        <span class="titulo-producto letreros" id="nombreproducto13">Hilo de Sutura Nylon 3-0</span>
+                    <img src="./img/nylonhtml.jpg" alt="Sutura Nylon 3-0" class="producto-img">
+                    <div class="titulo">
+                        <span class="titulo-producto letreros" id="nombreproducto13">Sutura Nylon 3-0</span>
                         <span class="titulo-cantidad letreros" id="descripcionproducto13">Caja de 36 unidades</span>
                     </div>
                     <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto13">$48.<span class="decimales">00</span></p>
+                        <p class="precio">$48.<span class="decimales">00</span></p>
                     </div>
                 </div>
                 <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto13">
+                    <div class="contador">
+                        <button onclick="cambiarValor(-1,this)">-</button>
+                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto13">
+                        <button onclick="cambiarValor(1,this)">+</button>
+                    </div>
                     <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 3-0', 48.00, 'cantidad-hilo13')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 3-0', 48.00, 'cantidad-hilo13')">+ &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Sutura Nylon 3-0', 'Caja de 36 unidades', 'cantidadproducto13', 48.00)">Agregar &#x1F6D2;</button>
                     </div>
                 </div>
             </div>
             
             <div class="producto">
                 <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 4-0" class="producto-img">
-                    <div class="titulo" id="nombreproducto14">
-                        <span class="titulo-producto letreros" id="nombreproducto14">Hilo de Sutura Nylon 4-0</span>
+                    <img src="./img/nylonhtml.jpg" alt="Sutura Nylon 4-0" class="producto-img">
+                    <div class="titulo">
+                        <span class="titulo-producto letreros" id="nombreproducto14">Sutura Nylon 4-0</span>
                         <span class="titulo-cantidad letreros" id="descripcionproducto14">Caja de 36 unidades</span>
                     </div>
                     <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto14">$48.<span class="decimales">00</span></p>
+                        <p class="precio">$48.<span class="decimales">00</span></p>
                     </div>
                 </div>
                 <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto14">
+                    <div class="contador">
+                        <button onclick="cambiarValor(-1,this)">-</button>
+                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto14">
+                        <button onclick="cambiarValor(1,this)">+</button>
+                    </div>
                     <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 4-0', 48.00, 'cantidad-hilo14')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 4-0', 48.00, 'cantidad-hilo14')">+ &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Sutura Nylon 4-0', 'Caja de 36 unidades', 'cantidadproducto14', 48.00)">Agregar &#x1F6D2;</button>
                     </div>
                 </div>
             </div>
-            
+        </section>
+        <section id="suturaseda">
             <div class="producto">
                 <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 5-0" class="producto-img">
-                    <div class="titulo" id="nombreproducto15">
-                        <span class="titulo-producto letreros" id="nombreproducto15">Hilo de Sutura Nylon 5-0</span>
+                    <img src="./img/sedadoscero.JPG" alt="Sutura Seda Negra 2-0" class="producto-img">
+                    <div class="titulo">
+                        <span class="titulo-producto letreros" id="nombreproducto15">Sutura Seda Negra 2-0</span>
                         <span class="titulo-cantidad letreros" id="descripcionproducto15">Caja de 36 unidades</span>
                     </div>
                     <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto15">$48.<span class="decimales">00</span></p>
+                        <p class="precio">$48.<span class="decimales">00</span></p>
                     </div>
                 </div>
                 <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto15">
+                    <div class="contador">
+                        <button onclick="cambiarValor(-1,this)">-</button>
+                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto15">
+                        <button onclick="cambiarValor(1,this)">+</button>
+                    </div>
                     <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 5-0', 48.00, 'cantidad-hilo15')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 5-0', 48.00, 'cantidad-hilo15')">+ &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Sutura Seda Negra 2-0', 'Caja de 36 unidades', 'cantidadproducto15', 48.00)">Agregar &#x1F6D2;</button>
                     </div>
                 </div>
             </div>
             
-
-        </section>
-        <section class="insumos1">
             <div class="producto">
                 <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto16">
-                        <span class="titulo-producto letreros" id="nombreproducto16">Hilo de Sutura Nylon 0</span>
+                    <img src="./img/sedatrescero.JPG" alt="Sutura Seda Negra 3-0" class="producto-img">
+                    <div class="titulo">
+                        <span class="titulo-producto letreros" id="nombreproducto16">Sutura Seda Negra 3-0</span>
                         <span class="titulo-cantidad letreros" id="descripcionproducto16">Caja de 36 unidades</span>
                     </div>
                     <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto16">$48.<span class="decimales">00</span></p>
+                        <p class="precio">$48.<span class="decimales">00</span></p>
                     </div>
                 </div>
                 <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto16">
+                    <div class="contador">
+                        <button onclick="cambiarValor(-1,this)">-</button>
+                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto16">
+                        <button onclick="cambiarValor(1,this)">+</button>
+                    </div>
                     <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo16')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo16')">+ &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Sutura Seda Negra 3-0', 'Caja de 36 unidades', 'cantidadproducto16', 48.00)">Agregar &#x1F6D2;</button>
                     </div>
                 </div>
             </div>
+        </section>
+        <section id="suturavicryl">
             <div class="producto">
                 <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto17">
-                        <span class="titulo-producto letreros" id="nombreproducto17">Hilo de Sutura Nylon 0</span>
+                    <img src="./img/vicryl1.JPG" alt="Sutura Vicryl 1" class="producto-img">
+                    <div class="titulo">
+                        <span class="titulo-producto letreros" id="nombreproducto17">Sutura Vicryl 1</span>
                         <span class="titulo-cantidad letreros" id="descripcionproducto17">Caja de 36 unidades</span>
                     </div>
                     <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto17">$48.<span class="decimales">00</span></p>
+                        <p class="precio">$63.<span class="decimales">00</span></p>
                     </div>
                 </div>
                 <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto17">
+                    <div class="contador">
+                        <button onclick="cambiarValor(-1,this)">-</button>
+                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto17">
+                        <button onclick="cambiarValor(1,this)">+</button>
+                    </div>
                     <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo17')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo17')">+ &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Sutura Vicryl 1', 'Caja de 36 unidades', 'cantidadproducto17', 63.00)">Agregar &#x1F6D2;</button>
                     </div>
                 </div>
             </div>
+            
             <div class="producto">
                 <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto18">
-                        <span class="titulo-producto letreros" id="nombreproducto18">Hilo de Sutura Nylon 0</span>
+                    <img src="./img/vicryldoscero.JPG" alt="Sutura Vicryl 2-0" class="producto-img">
+                    <div class="titulo">
+                        <span class="titulo-producto letreros" id="nombreproducto18">Sutura Vicryl 2-0</span>
                         <span class="titulo-cantidad letreros" id="descripcionproducto18">Caja de 36 unidades</span>
                     </div>
                     <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto18">$48.<span class="decimales">00</span></p>
+                        <p class="precio">$63.<span class="decimales">00</span></p>
                     </div>
                 </div>
                 <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto18">
+                    <div class="contador">
+                        <button onclick="cambiarValor(-1,this)">-</button>
+                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto18">
+                        <button onclick="cambiarValor(1,this)">+</button>
+                    </div>
                     <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo18')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo18')">+ &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Sutura Vicryl 2-0', 'Caja de 36 unidades', 'cantidadproducto18', 63.00)">Agregar &#x1F6D2;</button>
                     </div>
                 </div>
             </div>
+            
             <div class="producto">
                 <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto19">
-                        <span class="titulo-producto letreros" id="nombreproducto19">Hilo de Sutura Nylon 0</span>
+                    <img src="./img/vicryltrescero.JPG" alt="Sutura Vicryl 3-0" class="producto-img">
+                    <div class="titulo">
+                        <span class="titulo-producto letreros" id="nombreproducto19">Sutura Vicryl 3-0</span>
                         <span class="titulo-cantidad letreros" id="descripcionproducto19">Caja de 36 unidades</span>
                     </div>
                     <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto19">$48.<span class="decimales">00</span></p>
+                        <p class="precio">$63.<span class="decimales">00</span></p>
                     </div>
                 </div>
                 <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto19">
+                    <div class="contador">
+                        <button onclick="cambiarValor(-1,this)">-</button>
+                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto19">
+                        <button onclick="cambiarValor(1,this)">+</button>
+                    </div>
                     <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo19')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo19')">+ &#x1F6D2;</button>
+                        <button class="agregar" onclick="agregarAlCarrito('Sutura Vicryl 3-0', 'Caja de 36 unidades', 'cantidadproducto19', 63.00)">Agregar &#x1F6D2;</button>
                     </div>
                 </div>
             </div>
+            
         </section>
+        <section id="apositos">
+            <div class="producto">
+                <div class="letra-img">
+                    <img src="./img/esponjahemostatica.jpg" alt="Esponja Hemostática 10 cm x 12 cm" class="producto-img">
+                    <div class="titulo">
+                        <span class="titulo-producto letreros" id="nombreproducto20">Esponja Hemostática 10 cm x 12 cm</span>
+                        <span class="titulo-cantidad letreros" id="descripcionproducto20">Unidad</span>
+                    </div>
+                    <div class="etiqueta-price">
+                        <p class="precio">$20.<span class="decimales">00</span></p>
+                    </div>
+                </div>
+                <div class="producto-info">
+                    <div class="contador">
+                        <button onclick="cambiarValor(-1,this)">-</button>
+                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto20">
+                        <button onclick="cambiarValor(1,this)">+</button>
+                    </div>
+                    <div class="agregar-quitar">
+                        <button class="agregar" onclick="agregarAlCarrito('Esponja Hemostática 10 cm x 12 cm', 'Unidad', 'cantidadproducto20', 20.00)">Agregar &#x1F6D2;</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="producto">
+                <div class="letra-img">
+                    <img src="./img/esponjahemostatica.jpg" alt="Esponja Hemostática 5 cm x 8 cm" class="producto-img">
+                    <div class="titulo">
+                        <span class="titulo-producto letreros" id="nombreproducto21">Esponja Hemostática 5 cm x 8 cm</span>
+                        <span class="titulo-cantidad letreros" id="descripcionproducto21">Unidad</span>
+                    </div>
+                    <div class="etiqueta-price">
+                        <p class="precio">$12.<span class="decimales">00</span></p>
+                    </div>
+                </div>
+                <div class="producto-info">
+                    <div class="contador">
+                        <button onclick="cambiarValor(-1,this)">-</button>
+                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto21">
+                        <button onclick="cambiarValor(1,this)">+</button>
+                    </div>
+                    <div class="agregar-quitar">
+                        <button class="agregar" onclick="agregarAlCarrito('Esponja Hemostática 5 cm x 8 cm', 'Unidad', 'cantidadproducto21', 12.00)">Agregar &#x1F6D2;</button>
+                    </div>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="letra-img">
+                    <img src="./img/hemotamp.jpg" alt="Esponja Hemostática 2 cm x 1 cm" class="producto-img">
+                    <div class="titulo">
+                        <span class="titulo-producto letreros" id="nombreproducto22">Esponja Hemostática 2 cm x 1 cm</span>
+                        <span class="titulo-cantidad letreros" id="descripcionproducto22">12 unidades</span>
+                    </div>
+                    <div class="etiqueta-price">
+                        <p class="precio">$22.<span class="decimales">00</span></p>
+                    </div>
+                </div>
+                <div class="producto-info">
+                    <div class="contador">
+                        <button onclick="cambiarValor(-1,this)">-</button>
+                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto22">
+                        <button onclick="cambiarValor(1,this)">+</button>
+                    </div>
+                    <div class="agregar-quitar">
+                        <button class="agregar" onclick="agregarAlCarrito('Esponja Hemostática 2 cm x 1 cm', '12 unidades', 'cantidadproducto22', 22.00)">Agregar &#x1F6D2;</button>
+                    </div>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="letra-img">
+                    <img src="./img/AlgodonHidrofilo.jpg" alt="Algodón Hidrófilo de 500 gramos" class="producto-img">
+                    <div class="titulo">
+                        <span class="titulo-producto letreros" id="nombreproducto23">Algodón Hidrófilo Seccionado</span>
+                        <span class="titulo-cantidad letreros" id="descripcionproducto23">Paquete de 500g</span>
+                    </div>
+                    <div class="etiqueta-price">
+                        <p class="precio">$9.<span class="decimales">00</span></p>
+                    </div>
+                </div>
+                <div class="producto-info">
+                    <div class="contador">
+                        <button onclick="cambiarValor(-1,this)">-</button>
+                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto23">
+                        <button onclick="cambiarValor(1,this)">+</button>
+                    </div>
+                    <div class="agregar-quitar">
+                        <button class="agregar" onclick="agregarAlCarrito('Algodón Hidrófilo de 500 gramos', 'Unidad', 'cantidadproducto23', 9.00)">Agregar &#x1F6D2;</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="producto">
+                <div class="letra-img">
+                    <img src="./img/rollogasa.jpg" alt="Rollo de Gasa sin Hilachas (Tipo Tela)" class="producto-img">
+                    <div class="titulo">
+                        <span class="titulo-producto letreros" id="nombreproducto24">Rollo de Gasa sin Hilachas (Tipo Tela)</span>
+                        <span class="titulo-cantidad letreros" id="descripcionproducto24">Rollo de 59cm x 100m</span>
+                    </div>
+                    <div class="etiqueta-price">
+                        <p class="precio">$35.<span class="decimales">00</span></p>
+                    </div>
+                </div>
+                <div class="producto-info">
+                    <div class="contador">
+                        <button onclick="cambiarValor(-1,this)">-</button>
+                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto24">
+                        <button onclick="cambiarValor(1,this)">+</button>
+                    </div>
+                    <div class="agregar-quitar">
+                        <button class="agregar" onclick="agregarAlCarrito('Rollo de Gasa sin Hilachas (Tipo Tela)', 'Rollo de 59cm x 100m', 'cantidadproducto24', 35.00)">Agregar &#x1F6D2;</button>
+                    </div>
+                </div>
+            </div>
+            
+            </section>
+            <section id="jeringas">
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/jeringainsulina.jpg" alt="Jeringa de 1ml para insulina" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros" id="nombreproducto30">Jeringa de 1ml para insulina</span>
+                            <span class="titulo-cantidad letreros" id="descripcionproducto30">Caja de 100 unidades</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$11.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto30">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar" onclick="agregarAlCarrito('Jeringa de 1ml para insulina', 'Caja de 100 unidades', 'cantidadproducto30', 11.00)">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/jeringaluer.jpg" alt="Jeringa de 1ml Luer-Lock" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros" id="nombreproducto31">Jeringa de 1ml</span>
+                            <span class="titulo-cantidad letreros" id="descripcionproducto31">Caja de 100 unidades</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$9.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto31">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar" onclick="agregarAlCarrito('Jeringa de 1ml Luer-Lock', 'Caja de 100 unidades', 'cantidadproducto31', 9.00)">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/jeringa.jpg" alt="Jeringa de 3ml" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros" id="nombreproducto32">Jeringa de 3ml</span>
+                            <span class="titulo-cantidad letreros" id="descripcionproducto32">Caja de 100 unidades</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$7.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto32">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar" onclick="agregarAlCarrito('Jeringa de 3ml', 'Caja de 100 unidades', 'cantidadproducto32', 7.00)">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/jeringa.jpg" alt="Jeringa de 5ml" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros" id="nombreproducto33">Jeringa de 5ml</span>
+                            <span class="titulo-cantidad letreros" id="descripcionproducto33">Caja de 100 unidades</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$8.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto33">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar" onclick="agregarAlCarrito('Jeringa de 5ml', 'Caja de 100 unidades', 'cantidadproducto33', 8.00)">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/jeringa.jpg" alt="Jeringa de 10ml" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros" id="nombreproducto34">Jeringa de 10ml</span>
+                            <span class="titulo-cantidad letreros" id="descripcionproducto34">Caja de 100 unidades</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$12.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto34">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar" onclick="agregarAlCarrito('Jeringa de 10ml', 'Caja de 100 unidades', 'cantidadproducto34', 12.00)">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/jeringa.jpg" alt="Jeringa de 20ml" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros" id="nombreproducto35">Jeringa de 20ml</span>
+                            <span class="titulo-cantidad letreros" id="descripcionproducto35">Caja de 100 unidades</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$20.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto35">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar" onclick="agregarAlCarrito('Jeringa de 20ml', 'Caja de 100 unidades', 'cantidadproducto35', 20.00)">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
         
-        <section class="insumos2">
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto20">
-                        <span class="titulo-producto letreros" id="nombreproducto20">Hilo de Sutura Nylon 0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto20">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto20">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto20">
-                    <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo20')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo20')">+ &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto21">
-                        <span class="titulo-producto letreros" id="nombreproducto21">Hilo de Sutura Nylon 0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto21">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto21">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto21">
-                    <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo21')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo21')">+ &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto22">
-                        <span class="titulo-producto letreros" id="nombreproducto22">Hilo de Sutura Nylon 0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto22">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto22">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto22">
-                    <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo22')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo22')">+ &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto23">
-                        <span class="titulo-producto letreros" id="nombreproducto23">Hilo de Sutura Nylon 0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto23">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto23">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto23">
-                    <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo23')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo23')">+ &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="insumos3">
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto24">
-                        <span class="titulo-producto letreros" id="nombreproducto24">Hilo de Sutura Nylon 0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto24">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto24">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto24">
-                    <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo24')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo24')">+ &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto25">
-                        <span class="titulo-producto letreros" id="nombreproducto25">Hilo de Sutura Nylon 0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto25">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto25">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto25">
-                    <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo25')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo25')">+ &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto26">
-                        <span class="titulo-producto letreros" id="nombreproducto26">Hilo de Sutura Nylon 0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto26">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto26">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto26">
-                    <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo26')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo26')">+ &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto27">
-                        <span class="titulo-producto letreros" id="nombreproducto27">Hilo de Sutura Nylon 0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto27">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto27">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto27">
-                    <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo27')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo27')">+ &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="insumos4">
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto28">
-                        <span class="titulo-producto letreros" id="nombreproducto28">Hilo de Sutura Nylon 0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto28">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto28">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto28">
-                    <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo28')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo28')">+ &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto29">
-                        <span class="titulo-producto letreros" id="nombreproducto29">Hilo de Sutura Nylon 0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto29">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto29">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto29">
-                    <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo29')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo29')">+ &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto30">
-                        <span class="titulo-producto letreros" id="nombreproducto30">Hilo de Sutura Nylon 0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto30">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto30">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto30">
-                    <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo30')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo30')">+ &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto31">
-                        <span class="titulo-producto letreros" id="nombreproducto31">Hilo de Sutura Nylon 0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto31">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto31">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto31">
-                    <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo31')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo31')">+ &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="insumos5">
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto32">
-                        <span class="titulo-producto letreros" id="nombreproducto32">Hilo de Sutura Nylon 0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto32">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto32">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto32">
-                    <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo32')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo32')">+ &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto33">
-                        <span class="titulo-producto letreros" id="nombreproducto33">Hilo de Sutura Nylon 0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto33">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto33">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto33">
-                    <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo33')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo33')">+ &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto34">
-                        <span class="titulo-producto letreros" id="nombreproducto34">Hilo de Sutura Nylon 0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto34">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto34">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto34">
-                    <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo34')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo34')">+ &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto35">
-                        <span class="titulo-producto letreros" id="nombreproducto35">Hilo de Sutura Nylon 0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto35">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto-35">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto35">
-                    <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo35')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo35')">+ &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-        </section> 
-        <section class="insumos6">
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto36">
-                        <span class="titulo-producto letreros" id="nombreproducto36">Hilo de Sutura Nylon 0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto36">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto36">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto36">
-                    <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo36')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo36')">+ &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto37">
-                        <span class="titulo-producto letreros" id="nombreproducto37">Hilo de Sutura Nylon 0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto37">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto37">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto37">
-                    <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo37')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo37')">+ &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto38">
-                        <span class="titulo-producto letreros" id="nombreproducto38">Hilo de Sutura Nylon 0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto38">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto38">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto38">
-                    <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo38')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo38')">+ &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto39">
-                        <span class="titulo-producto letreros" id="nombreproducto39">Hilo de Sutura Nylon 0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto39">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto39">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto39">
-                    <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo39')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo39')">+ &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="insumos7">
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto40">
-                        <span class="titulo-producto letreros" id="nombreproducto40">Hilo de Sutura Nylon 0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto40">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto40">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto40">
-                    <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo40')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo40')">+ &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto41">
-                        <span class="titulo-producto letreros" id="nombreproducto41">Hilo de Sutura Nylon 0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto41">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto41">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto41">
-                    <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo41')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo41')">+ &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto42">
-                        <span class="titulo-producto letreros" id="nombreproducto42">Hilo de Sutura Nylon 0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto42">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto42">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto42">
-                    <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo42')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo42')">+ &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Hilo de sutura Nylon 0" class="producto-img">
-                    <div class="titulo" id="nombreproducto43">
-                        <span class="titulo-producto letreros" id="nombreproducto43">Hilo de Sutura Nylon 0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto43">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio" id="cantidadproducto43">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto43">
-                    <div class="agregar-quitar">
-                        <button class="quitar" onclick="quitarDelCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo43')">- &#x1F6D2;</button>
-                        <button class="agregar" onclick="agregarAlCarrito('Hilo de sutura Nylon 0', 48.00, 'cantidad-hilo43')">+ &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="insumos8">
-            <!-- Continúa hasta el producto 50 -->
-        </section>
-                       
+
+
+
+
+        <!-- fin contenido de productos -->
         </div>
         <nav class="menu">
             <ul>
@@ -950,7 +792,7 @@
         <script src="./javascript/carrito.js" type="module"></script>
         <script src="./javascript/hamburguesa.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-        <script src="script.js"></script>
+        <script src="./javascript/agrandarimg.js"></script>
 
 
 
