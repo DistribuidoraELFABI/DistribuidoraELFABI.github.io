@@ -466,7 +466,7 @@ li, a{
 .letreros{
     color: white;
     font-weight: bold; /* Negrita */
-    font-size: calc(7px + 1vw); /* Ajusta el tamaño dinámicamente */
+    font-size: 1em; /* Ajusta el tamaño dinámicamente */
     text-align: center;
 
     background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
@@ -655,12 +655,13 @@ section{
 .modal-adicional1{
     position: absolute;
     bottom: 10%;
-    left: 2%;
-    width: 69%;
+    left: 3%;
+    width: 95%;
     color: white;
     font-size: 0.9em;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 1px;
+    margin: 1px;
 
     text-align: left;
 }
@@ -687,7 +688,7 @@ section{
 
 .modal-price{
     position: absolute;
-    top: 70%;
+    top: 50%;
     left: 75%;
     width: auto;
     color: rgb(198, 9, 9);
@@ -1016,7 +1017,7 @@ section{
     }
 
 .titulo>.letreros{
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
 
 }
