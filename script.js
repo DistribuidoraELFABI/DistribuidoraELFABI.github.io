@@ -1,160 +1,159 @@
 
-let carrito = [];
+    let carrito = [];
 
-window.agregarAlCarrito = function(nombre, presentacion, idCantidad, precio) {
-    let inputElement = document.getElementById(idCantidad);
-  
-    if (!inputElement) {
-        console.log("Error: No se encontró el input con ID:", idCantidad);
-        return;
-    }
 
-    let cantidad = parseInt(inputElement.value);
-  
-    if (isNaN(cantidad) || cantidad <= 0) {
-        console.log("Cantidad inválida");
-        return;
-    }
+document.addEventListener("DOMContentLoaded", function () {
 
-    // Verificar si el producto ya existe en el carrito
-    let productoExistente = carrito.find(producto => producto.nombre === nombre && producto.presentacion === presentacion);
-    
-    if (productoExistente) {
-        // Si el producto ya está en el carrito, actualiza la cantidad y recalcula el total
-        productoExistente.cantidad += cantidad;
-        productoExistente.totalProducto = productoExistente.cantidad * precio;
-    } else {
-        // Si el producto no está en el carrito, lo agrega con el total calculado
-        carrito.push({
-            nombre,
-            presentacion,
-            cantidad,
-            precio,
-            totalProducto: cantidad * precio
-        });
-    }
+    document.querySelectorAll(".agregar").forEach(boton => {
+        boton.addEventListener("click", function () {
+            const productoDiv = boton.closest(".producto");
+            
+            const nombre = productoDiv.querySelector(".titulo-producto").textContent;
+            const presentacion = productoDiv.querySelector(".titulo-cantidad").textContent;
+            const cantidadInput = productoDiv.querySelector(".cantidad");
+            const cantidad = parseInt(cantidadInput.value, 10);
+            const precioTexto = productoDiv.querySelector(".precio").textContent.trim();
+            const precio = parseFloat(precioTexto.replace("$", "").replace(",", "."));
 
-    console.log(`Producto: ${nombre}, Presentación: ${presentacion}, Cantidad: ${cantidad} caja, Precio: $${precio}`);
-    console.log("Carrito actual:", carrito);
-    actualizarCarritoHTML();
+            if (isNaN(cantidad) || cantidad <= 0) {
+                console.log("Cantidad inválida");
+                return;
+            }
 
-    // Mostrar el carrito después de agregar el primer producto
-    if (carrito.length > 0) {
-        mostrarCarrito();
-    }
-};
+            const productoExistente = carrito.find(producto => producto.nombre === nombre && producto.presentacion === presentacion);
 
-// Función para calcular el total de la compra
-function actualizarTotal() {
-    let total = 0;
-    carrito.forEach(producto => {
-        total += producto.totalProducto;
-    });
-    return total.toFixed(2);
-}
+            if (productoExistente) {
+                productoExistente.cantidad += cantidad;
+                productoExistente.totalProducto = productoExistente.cantidad * precio;
+            } else {
+                carrito.push({
+                    nombre,
+                    presentacion,
+                    cantidad,
+                    precio,
+                    totalProducto: cantidad * precio
+                });
+            }
 
-// Función para eliminar un producto del carrito
-function eliminarDelCarrito(index) {
-    // Eliminar el producto del carrito según su índice
-    carrito.splice(index, 1);
-    actualizarCarritoHTML(); // Actualizar el carrito en el HTML
-    console.log("Carrito después de eliminar el producto:", carrito);
-    // Actualizar el total
-    if (carrito.length === 0) {
-        ocultarCarrito();
-    }
-}
+            console.log("Carrito actualizado:", carrito);
+            actualizarCarritoHTML();
 
-// Función para actualizar el HTML con los productos del carrito
-function actualizarCarritoHTML() {
-    const listaProductos = document.getElementById("lista-productos");
-    const totalCarrito = document.getElementById("total-carrito-valor");
-
-    // Limpiar la tabla antes de volver a llenarla
-    listaProductos.innerHTML = "";
-
-    carrito.forEach((producto, index) => {
-        let fila = document.createElement("tr");
-
-        let tdNombre = document.createElement("td");
-        tdNombre.textContent = producto.nombre;
-
-        let tdPresentacion = document.createElement("td");
-        tdPresentacion.textContent = producto.presentacion;
-
-        let tdCantidad = document.createElement("td");
-        let inputCantidad = document.createElement("input");
-        inputCantidad.type = "number";
-        inputCantidad.value = producto.cantidad;
-        inputCantidad.min = 1; // Para evitar cantidades negativas o cero
-        inputCantidad.addEventListener("change", function() {
-            let nuevaCantidad = parseInt(inputCantidad.value);
-            if (!isNaN(nuevaCantidad) && nuevaCantidad > 0) {
-                // Actualizar la cantidad en el carrito
-                carrito[index].cantidad = nuevaCantidad;
-                carrito[index].totalProducto = nuevaCantidad * producto.precio;
-                actualizarCarritoHTML(); // Volver a actualizar la tabla
+            if (carrito.length > 0) {
+                mostrarCarrito();
             }
         });
-
-        tdCantidad.appendChild(inputCantidad);
-
-        let tdPrecio = document.createElement("td");
-        tdPrecio.textContent = `$${producto.totalProducto.toFixed(2)}`;
-
-        let tdEliminar = document.createElement("td");
-        let btnEliminar = document.createElement("button");
-        btnEliminar.textContent = "Eliminar";
-        btnEliminar.classList.add("eliminar-producto");
-        btnEliminar.onclick = function() {
-            eliminarDelCarrito(index);
-        };
-
-        tdEliminar.appendChild(btnEliminar);
-
-        // Agregar las celdas a la fila
-        fila.appendChild(tdNombre);
-        fila.appendChild(tdPresentacion);
-        fila.appendChild(tdCantidad);
-        fila.appendChild(tdPrecio);
-        fila.appendChild(tdEliminar);
-
-        // Agregar la fila a la tabla
-        listaProductos.appendChild(fila);
     });
 
-    // Actualizar el total
-    totalCarrito.textContent = actualizarTotal();
+    function actualizarTotal() {
+        return carrito.reduce((total, producto) => total + producto.totalProducto, 0).toFixed(2);
+    }
+
+    function eliminarDelCarrito(index) {
+        carrito.splice(index, 1);
+        actualizarCarritoHTML();
+        if (carrito.length === 0) {
+            ocultarCarrito();
+        }
+    }
+
+    function actualizarCarritoHTML() {
+        const listaProductos = document.getElementById("lista-productos");
+        const totalCarrito = document.getElementById("total-carrito-valor");
+        listaProductos.innerHTML = "";
+    
+        carrito.forEach((producto, index) => {
+            let fila = document.createElement("tr");
+    
+            let tdNombre = document.createElement("td");
+            tdNombre.textContent = producto.nombre;
+    
+            let tdPresentacion = document.createElement("td");
+            tdPresentacion.textContent = producto.presentacion;
+    
+            let tdCantidad = document.createElement("td");
+            let inputCantidad = document.createElement("input");
+            inputCantidad.type = "number";
+            inputCantidad.value = producto.cantidad;
+            inputCantidad.min = 1;
+            tdCantidad.appendChild(inputCantidad);
+    
+            let tdPrecio = document.createElement("td");
+            tdPrecio.textContent = `$${producto.totalProducto.toFixed(2)}`;
+    
+            let tdEliminar = document.createElement("td");
+            let btnEliminar = document.createElement("button");
+            btnEliminar.classList.add("eliminar-producto");
+            btnEliminar.textContent = "Eliminar";
+            tdEliminar.appendChild(btnEliminar);
+    
+            fila.appendChild(tdNombre);
+            fila.appendChild(tdPresentacion);
+            fila.appendChild(tdCantidad);
+            fila.appendChild(tdPrecio);
+            fila.appendChild(tdEliminar);
+    
+            inputCantidad.addEventListener("change", function (event) {
+                let nuevaCantidad = parseInt(event.target.value, 10);
+                if (!isNaN(nuevaCantidad) && nuevaCantidad > 0) {
+                    carrito[index].cantidad = nuevaCantidad;
+                    carrito[index].totalProducto = nuevaCantidad * carrito[index].precio;
+                    actualizarCarritoHTML();
+                }
+            });
+    
+            btnEliminar.addEventListener("click", function () {
+                eliminarDelCarrito(index);
+            });
+    
+            listaProductos.appendChild(fila);
+        });
+    
+        totalCarrito.textContent = actualizarTotal();
+    }
+    
+
+    function ocultarCarrito() {
+        const carrito = document.querySelector(".carrito-detalles");
+        if (carrito) {
+            carrito.style.display = "none";
+        }
+    }
+    
+
+    function mostrarCarrito() {
+        const carrito = document.querySelector(".carrito-detalles"); // Seleccionar por clase
+        if (carrito) {
+            carrito.style.display = "block";
+        } else {
+            console.error("El elemento con la clase 'carrito-detalles' no se encontró en el DOM.");
+        }
+    }
+    
+    
+});
+function actualizarTotal() {
+    return carrito.reduce((total, producto) => total + producto.totalProducto, 0).toFixed(2);
 }
 
-
-// Función para ocultar el carrito
-function ocultarCarrito() {
-    document.getElementById("carrito-detalles").style.display = "none";
-}
-
-// Función para mostrar el carrito
-function mostrarCarrito() {
-    document.getElementById("carrito-detalles").style.display = "block";
-}
 
 // Generar PDF con la información del carrito
-window.generarPDF= function() {
-    // Crear una nueva instancia de jsPDF
+window.generarPDF = function (totalCarrito) {
+    if (carrito.length === 0) {
+        console.log("No hay productos en el carrito para generar el PDF.");
+        return; // Si el carrito está vacío, no generamos el PDF
+    }
+
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF({
-        unit: 'mm',      // Usamos milímetros como unidades
-        format: 'a4',    // Tamaño A4
+        unit: 'mm',
+        format: 'a4',
     });
 
-    // Establecer márgenes personalizados
+    // Márgenes personalizados
     const margenIzquierdo = 10;
     const margenSuperior = 10;
     const margenDerecho = 10;
     const margenInferior = 10;
-
-    // Ancho disponible en la página (sin márgenes)
-    const anchoPagina = 210 - margenIzquierdo - margenDerecho;
 
     // Título del documento
     doc.setFontSize(14);
@@ -163,76 +162,89 @@ window.generarPDF= function() {
     // Instrucciones
     doc.setFontSize(10);
     doc.text("Instrucciones:", margenIzquierdo, margenSuperior + 8);
-    doc.setFontSize(8);
+    doc.setFont("helvetica", "bold");
     doc.text("Realice una captura de este archivo y luego pulse en el link de WhatsApp y envíenos su pedido:", margenIzquierdo, margenSuperior + 15);
+
     // Enlace de WhatsApp
-    const whatsappLink = "https://wa.me/5939620735406";  // El número y enlace de WhatsApp
+    const whatsappLink = "https://wa.me/593962735406";
     doc.setFontSize(16);
     doc.setTextColor(37, 211, 102);
-    doc.textWithLink("Link WhatsApp", margenIzquierdo + 125, margenSuperior + 15, { url: whatsappLink });  // Aquí se crea el enlace
-    
-    // doc.text("y envíenos su pedido.", margenIzquierdo, margenSuperior + 5);
+    doc.textWithLink("Link WhatsApp", margenIzquierdo + 125, margenSuperior + 5, { url: whatsappLink });
 
-    // Cabecera de la tabla (mantenemos las celdas anchas)
-    const alturaCabecera = margenSuperior + 25;  // Ajustamos la altura para que las instrucciones no se solapen
-    const margenColumna = 10; // Margen entre columnas
-    const anchoColumna1 = 60;  // Ancho de la columna 1 (Nombre)
-    const anchoColumna2 = 40;  // Ancho de la columna 2 (Presentación)
-    const anchoColumna3 = 30;  // Ancho de la columna 3 (Cantidad)
-    const anchoColumna4 = 40;  // Ancho de la columna 4 (Precio)
-
-    // Posicionamiento inicial de las celdas
+    // Configuración de la tabla
+    const alturaCabecera = margenSuperior + 25;
+    const margenColumna = 5;
+    const anchoColumna1 = 65;
+    const anchoColumna2 = 58;
+    const anchoColumna3 = 25;
+    const anchoColumna4 = 25;
+    const alturaFila = 8; // Altura de cada fila
     let yPosition = alturaCabecera + 5;
 
-    // Agregar las cabeceras de la tabla
+    // Dibujar la cabecera de la tabla con bordes
     doc.setFontSize(10);
     doc.setTextColor(0, 0, 0);
+    doc.setFont("helvetica", "bold");
 
-    doc.text("Nombre", margenIzquierdo, yPosition);
-    doc.text("Presentación", margenIzquierdo + anchoColumna1 + margenColumna, yPosition);
-    doc.text("Cantidad", margenIzquierdo + anchoColumna1 + anchoColumna2 + margenColumna * 2, yPosition);
-    doc.text("Precio", margenIzquierdo + anchoColumna1 + anchoColumna2 + anchoColumna3 + margenColumna * 3, yPosition);
+    doc.rect(margenIzquierdo, yPosition - 5, anchoColumna1, alturaFila); // Nombre
+    doc.rect(margenIzquierdo + anchoColumna1, yPosition - 5, anchoColumna2, alturaFila); // Presentación
+    doc.rect(margenIzquierdo + anchoColumna1 + anchoColumna2, yPosition - 5, anchoColumna3, alturaFila); // Cantidad
+    doc.rect(margenIzquierdo + anchoColumna1 + anchoColumna2 + anchoColumna3, yPosition - 5, anchoColumna4, alturaFila); // Subtotal
 
-    
-    // Aumentar la posición para las filas
-    yPosition += 10;
+    doc.text("Nombre", margenIzquierdo + 2, yPosition);
+    doc.text("Presentación", margenIzquierdo + anchoColumna1 + 2, yPosition);
+    doc.text("Cantidad", margenIzquierdo + anchoColumna1 + anchoColumna2 + 5, yPosition);
+    doc.text("Subtotal", margenIzquierdo + anchoColumna1 + anchoColumna2 + anchoColumna3 + 5, yPosition);
 
-    // Rellenar los productos del carrito
+    yPosition += alturaFila;
+
+    // Dibujar los productos del carrito con bordes
+    doc.setFont("helvetica", "normal");
     carrito.forEach(producto => {
-        // Verificar si el contenido se desborda
         if (yPosition > 270) {  // Si se acerca al final de la página
-            doc.addPage();  // Agregar una nueva página
-            yPosition = 10;  // Reiniciar la posición Y
+            doc.addPage();
+            yPosition = 10;
             doc.setFontSize(10);
         }
 
-        // Escribir los valores en las celdas, ajustando las coordenadas
-        doc.text(producto.nombre, margenIzquierdo, yPosition);
-        doc.text(producto.presentacion, margenIzquierdo + anchoColumna1 + margenColumna, yPosition);
-        doc.text(producto.cantidad.toString(), margenIzquierdo + anchoColumna1 + anchoColumna2 + margenColumna * 2, yPosition);
-        doc.text(`$${producto.totalProducto.toFixed(2)}`, margenIzquierdo + anchoColumna1 + anchoColumna2 + anchoColumna3 + margenColumna * 3, yPosition);
+        doc.rect(margenIzquierdo, yPosition - 5, anchoColumna1, alturaFila);
+        doc.rect(margenIzquierdo + anchoColumna1, yPosition - 5, anchoColumna2, alturaFila);
+        doc.rect(margenIzquierdo + anchoColumna1 + anchoColumna2, yPosition - 5, anchoColumna3, alturaFila);
+        doc.rect(margenIzquierdo + anchoColumna1 + anchoColumna2 + anchoColumna3, yPosition - 5, anchoColumna4, alturaFila);
 
-        // Aumentar la posición para la siguiente fila
-        yPosition += 10;
+        doc.text(producto.nombre, margenIzquierdo + 2, yPosition);
+        doc.text(producto.presentacion, margenIzquierdo + anchoColumna1 + 2, yPosition);
+        // Calcular la posición centrada para la cantidad
+        const xCantidad = margenIzquierdo + anchoColumna1 + anchoColumna2 + (anchoColumna3 / 2);
+
+        // Agregar el texto centrado
+        doc.text(producto.cantidad.toString(), xCantidad, yPosition, { align: "center" });
+
+        // doc.text(producto.cantidad.toString(), margenIzquierdo + anchoColumna1 + anchoColumna2 + 5, yPosition, {align:"center"});
+        doc.text(`$${producto.totalProducto.toFixed(2)}`, margenIzquierdo + anchoColumna1 + anchoColumna2 + anchoColumna3 + 5, yPosition);
+
+        yPosition += alturaFila;
     });
 
-    // Total
-    doc.text("Total: $" + actualizarTotal(), margenIzquierdo, yPosition + 10);
+    // Dibujar total con borde
+    doc.setFont("helvetica", "bold");
+    doc.rect(margenIzquierdo, yPosition - 5, anchoColumna1 + anchoColumna2 + anchoColumna3, alturaFila);
+    doc.rect(margenIzquierdo + anchoColumna1 + anchoColumna2 + anchoColumna3, yPosition - 5, anchoColumna4, alturaFila);
+    doc.text("Total:", margenIzquierdo + anchoColumna1 + anchoColumna2, yPosition);
+    doc.text(`$${actualizarTotal()}`, margenIzquierdo + anchoColumna1 + anchoColumna2 + anchoColumna3 + 5, yPosition);
 
-    
-        // Guardar el PDF
+    // Guardar el PDF
     doc.save("carrito_compras.pdf");
-    // Guardar el archivo PDF como un Blob
-    const pdfBlob = doc.output('blob');
 
-    // Crear un enlace de descarga
+    // Guardar como blob y crear enlace de descarga
+    const pdfBlob = doc.output('blob');
     const pdfURL = URL.createObjectURL(pdfBlob);
     const enlaceDescarga = document.createElement('a');
     enlaceDescarga.href = pdfURL;
-    enlaceDescarga.download = "carrito_compras.pdf"; // Nombre del archivo
-    enlaceDescarga.click();  // Inicia la descarga del PDF
-
-}
+    enlaceDescarga.download = "carrito_compras.pdf";
+    enlaceDescarga.click();
+};
+//funcion cambiar valor
 window.cambiarValor = function(valor) {
     let input = document.getElementById("cantidadproducto1");
     let nuevoValor = parseInt(input.value) + valor;
