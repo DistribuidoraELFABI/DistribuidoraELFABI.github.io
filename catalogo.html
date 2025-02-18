@@ -48,9 +48,6 @@
                             <div id="total-carrito">
                                 <span class="totalSp">Total      $</span>  <span id="total-carrito-valor">0.00</span><br>
                                 <button onclick="generarPDF()">Generar PDF</button>
-                                <!-- <button onclick="generarPDF()">Generar PDF y Enviar por WhatsApp</button> -->
-
-                                <!-- <div id="contenedor-whatsapp"></div>  Contenedor donde se agregará el botón de WhatsApp -->
                             
 
                             </div>
@@ -61,673 +58,17 @@
     </header>
     <main>
         <div class="contenido">
-        <!--Aquí empieza el catálogo  -->
-            <!-- Sección de Guantes -->
-        <section id="guanteslatex">
-            <!--Guantes de Látex  -->
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/GUANTES LATEX L.jpg" alt="Guantes de manejo de látex talla S" class="producto-img">
-                    <div class="titulo">
-                        <span class="letreros" id="nombreproducto1">Guantes Latex Talla S</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto1">Caja de 100 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio" >$6.<span class="decimales">50</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <div class="contador">
-                        <button onclick="cambiarValor(-1,this)">-</button>
-                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto1">
-                        <button onclick="cambiarValor(1,this)">+</button>
-                    </div>
-                    <div class="agregar-quitar">
-                        <button class="agregar" onclick="agregarAlCarrito('Guante de látex talla S', 'Caja de 100 unidades', 'cantidadproducto1', 6.50)">Agregar &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/GUANTES LATEX L.jpg" alt="Guantes de manejo de látex talla M" class="producto-img"><!-- cambiar texto alternativo -->
-                    <div class="titulo">
-                        <span class="titulo-producto letreros" id="nombreproducto2">Guantes Latex Talla M</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto2">Caja de 100 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio" >$6.<span class="decimales">50</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <div class="contador">
-                        <button onclick="cambiarValor(-1,this)">-</button>
-                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto2">
-                        <button onclick="cambiarValor(1,this)">+</button>
-                    </div>
-                    <div class="agregar-quitar">
-                        <button class="agregar" onclick="agregarAlCarrito('Guante de látex talla M', 'Caja de 100 unidades', 'cantidadproducto2', 6.50)">Agregar &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/GUANTES LATEX L.jpg" alt="Guantes de manejo de látex talla L" class="producto-img">
-                    <div class="titulo">
-                        <span class="titulo-producto letreros" id="nombreproducto3">Guantes Latex Talla L</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto3">Caja de 100 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio">$6.<span class="decimales">50</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <div class="contador">
-                        <button onclick="cambiarValor(-1,this)">-</button>
-                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto3">
-                        <button onclick="cambiarValor(1,this)">+</button>
-                    </div>
-                    <div class="agregar-quitar">
-                        <button class="agregar" onclick="agregarAlCarrito('Guante de látex talla L', 'Caja de 100 unidades', 'cantidadproducto3', 6.50)">Agregar &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="guantesnitrilo">
-            <!-- Guantes de Nitrilo Talla S -->
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/Guantes-de-Nitrilo-Negro.jpg" alt="Guantes de nitrilo talla S" class="producto-img">
-                    <div class="titulo">
-                        <span class="titulo-producto letreros" id="nombreproducto4">Guantes Nitrilo Talla S</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto4">Caja de 100 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio">$8.<span class="decimales">50</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <div class="contador">
-                        <button onclick="cambiarValor(-1,this)">-</button>
-                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto4">
-                        <button onclick="cambiarValor(1,this)">+</button>
-                    </div>
-                    <div class="agregar-quitar">
-                        <button class="agregar" onclick="agregarAlCarrito('Guante de nitrilo talla S', 'Caja de 100 unidades', 'cantidadproducto4', 8.50)">Agregar &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
+            <section id="antisepticos">
 
-            <!-- Guantes de Nitrilo Talla M -->
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/Guantes-de-Nitrilo-Negro.jpg" alt="Guantes de nitrilo talla M" class="producto-img">
-                    <div class="titulo">
-                        <span class="titulo-producto letreros" id="nombreproducto5">Guantes Nitrilo Talla M</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto5">Caja de 100 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio">$8.<span class="decimales">50</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <div class="contador">
-                        <button onclick="cambiarValor(-1,this)">-</button>
-                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto5">
-                        <button onclick="cambiarValor(1,this)">+</button>
-                    </div>
-                    <div class="agregar-quitar">
-                        <button class="agregar" onclick="agregarAlCarrito('Guante de nitrilo talla M', 'Caja de 100 unidades', 'cantidadproducto5', 8.50)">Agregar &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Guantes de Nitrilo Talla L -->
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/Guantes-de-Nitrilo-Negro.jpg" alt="Guantes de nitrilo talla L" class="producto-img">
-                    <div class="titulo">
-                        <span class="titulo-producto letreros" id="nombreproducto6">Guantes Nitrilo Talla L</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto6">Caja de 100 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio">$8.<span class="decimales">50</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <div class="contador">
-                        <button onclick="cambiarValor(-1,this)">-</button>
-                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto6">
-                        <button onclick="cambiarValor(1,this)">+</button>
-                    </div>
-                    <div class="agregar-quitar">
-                        <button class="agregar" onclick="agregarAlCarrito('Guante de nitrilo talla L', 'Caja de 100 unidades', 'cantidadproducto6', 8.50)">Agregar &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="guantesquirurgicos">
-            <!-- Guantes Quirúrgicos Estériles Talla 6.5 -->
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/guantesesteril.jpg" alt="Guantes quirúrgicos estériles talla 6.5" class="producto-img">
-                    <div class="titulo">
-                        <span class="titulo-producto letreros" id="nombreproducto7">Guantes Quirúrgicos Talla 6.5</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto7">Caja de 50 pares</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio">$32.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <div class="contador">
-                        <button onclick="cambiarValor(-1,this)">-</button>
-                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto7">
-                        <button onclick="cambiarValor(1,this)">+</button>
-                    </div>
-                    <div class="agregar-quitar">
-                        <button class="agregar" onclick="agregarAlCarrito('Guante Quirúrgico Talla 6.5', 'Caja de 50 pares', 'cantidadproducto7', 32.00)">Agregar &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Guantes Quirúrgicos Estériles Talla 7 -->
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/guantesesteril.jpg" alt="Guantes quirúrgicos estériles talla 7" class="producto-img">
-                    <div class="titulo">
-                        <span class="titulo-producto letreros" id="nombreproducto8">Guantes Quirúrgicos Talla 7</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto8">Caja de 50 pares</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio">$32.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <div class="contador">
-                        <button onclick="cambiarValor(-1,this)">-</button>
-                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto8">
-                        <button onclick="cambiarValor(1,this)">+</button>
-                    </div>
-                    <div class="agregar-quitar">
-                        <button class="agregar" onclick="agregarAlCarrito('Guante Quirúrgico Talla 7', 'Caja de 50 pares', 'cantidadproducto8', 32.00)">Agregar &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Guantes Quirúrgicos Estériles Talla 7.5 -->
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/guantesesteril.jpg" alt="Guantes quirúrgicos estériles talla 7.5" class="producto-img">
-                    <div class="titulo">
-                        <span class="titulo-producto letreros" id="nombreproducto9">Guantes Quirúrgicos Talla 7.5</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto9">Caja de 50 pares</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio">$32.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <div class="contador">
-                        <button onclick="cambiarValor(-1,this)">-</button>
-                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto9">
-                        <button onclick="cambiarValor(1,this)">+</button>
-                    </div>
-                    <div class="agregar-quitar">
-                        <button class="agregar" onclick="agregarAlCarrito('Guante Quirúrgico Talla 7.5', 'Caja de 50 pares', 'cantidadproducto9', 32.00)">Agregar &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Guantes Quirúrgicos Estériles Talla 8 -->
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/guantesesteril.jpg" alt="Guantes quirúrgicos estériles talla 8" class="producto-img">
-                    <div class="titulo">
-                        <span class="titulo-producto letreros" id="nombreproducto10">Guantes Quirúrgicos Talla 8</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto10">Caja de 50 pares</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio">$32.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <div class="contador">
-                        <button onclick="cambiarValor(-1,this)">-</button>
-                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto10">
-                        <button onclick="cambiarValor(1,this)">+</button>
-                    </div>
-                    <div class="agregar-quitar">
-                        <button class="agregar" onclick="agregarAlCarrito('Guante Quirúrgico Talla 8', 'Caja de 50 pares', 'cantidadproducto10', 32.00)">Agregar &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Guantes Quirúrgicos Estériles Talla 8.5 -->
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/guantesesteril.jpg" alt="Guantes quirúrgicos estériles talla 8.5" class="producto-img">
-                    <div class="titulo">
-                        <span class="titulo-producto letreros" id="nombreproducto11">Guantes Quirúrgicos Talla 8.5</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto11">Caja de 50 pares</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio">$32.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <div class="contador">
-                        <button onclick="cambiarValor(-1,this)">-</button>
-                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto11">
-                        <button onclick="cambiarValor(1,this)">+</button>
-                    </div>
-                    <div class="agregar-quitar">
-                        <button class="agregar" onclick="agregarAlCarrito('Guante Quirúrgico Talla 8.5', 'Caja de 50 pares', 'cantidadproducto11', 32.00)">Agregar &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="suturasnylon">
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Sutura Nylon 2-0" class="producto-img">
-                    <div class="titulo">
-                        <span class="titulo-producto letreros" id="nombreproducto12">Sutura Nylon 2-0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto12">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <div class="contador">
-                        <button onclick="cambiarValor(-1,this)">-</button>
-                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto12">
-                        <button onclick="cambiarValor(1,this)">+</button>
-                    </div>
-                    <div class="agregar-quitar">
-                        <button class="agregar" onclick="agregarAlCarrito('Sutura Nylon 2-0', 'Caja de 36 unidades', 'cantidadproducto12', 48.00)">Agregar &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Sutura Nylon 3-0" class="producto-img">
-                    <div class="titulo">
-                        <span class="titulo-producto letreros" id="nombreproducto13">Sutura Nylon 3-0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto13">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <div class="contador">
-                        <button onclick="cambiarValor(-1,this)">-</button>
-                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto13">
-                        <button onclick="cambiarValor(1,this)">+</button>
-                    </div>
-                    <div class="agregar-quitar">
-                        <button class="agregar" onclick="agregarAlCarrito('Sutura Nylon 3-0', 'Caja de 36 unidades', 'cantidadproducto13', 48.00)">Agregar &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/nylonhtml.jpg" alt="Sutura Nylon 4-0" class="producto-img">
-                    <div class="titulo">
-                        <span class="titulo-producto letreros" id="nombreproducto14">Sutura Nylon 4-0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto14">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <div class="contador">
-                        <button onclick="cambiarValor(-1,this)">-</button>
-                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto14">
-                        <button onclick="cambiarValor(1,this)">+</button>
-                    </div>
-                    <div class="agregar-quitar">
-                        <button class="agregar" onclick="agregarAlCarrito('Sutura Nylon 4-0', 'Caja de 36 unidades', 'cantidadproducto14', 48.00)">Agregar &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="suturaseda">
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/sedadoscero.JPG" alt="Sutura Seda Negra 2-0" class="producto-img">
-                    <div class="titulo">
-                        <span class="titulo-producto letreros" id="nombreproducto15">Sutura Seda Negra 2-0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto15">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <div class="contador">
-                        <button onclick="cambiarValor(-1,this)">-</button>
-                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto15">
-                        <button onclick="cambiarValor(1,this)">+</button>
-                    </div>
-                    <div class="agregar-quitar">
-                        <button class="agregar" onclick="agregarAlCarrito('Sutura Seda Negra 2-0', 'Caja de 36 unidades', 'cantidadproducto15', 48.00)">Agregar &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/sedatrescero.JPG" alt="Sutura Seda Negra 3-0" class="producto-img">
-                    <div class="titulo">
-                        <span class="titulo-producto letreros" id="nombreproducto16">Sutura Seda Negra 3-0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto16">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio">$48.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <div class="contador">
-                        <button onclick="cambiarValor(-1,this)">-</button>
-                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto16">
-                        <button onclick="cambiarValor(1,this)">+</button>
-                    </div>
-                    <div class="agregar-quitar">
-                        <button class="agregar" onclick="agregarAlCarrito('Sutura Seda Negra 3-0', 'Caja de 36 unidades', 'cantidadproducto16', 48.00)">Agregar &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="suturavicryl">
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/vicryl1.JPG" alt="Sutura Vicryl 1" class="producto-img">
-                    <div class="titulo">
-                        <span class="titulo-producto letreros" id="nombreproducto17">Sutura Vicryl 1</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto17">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio">$63.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <div class="contador">
-                        <button onclick="cambiarValor(-1,this)">-</button>
-                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto17">
-                        <button onclick="cambiarValor(1,this)">+</button>
-                    </div>
-                    <div class="agregar-quitar">
-                        <button class="agregar" onclick="agregarAlCarrito('Sutura Vicryl 1', 'Caja de 36 unidades', 'cantidadproducto17', 63.00)">Agregar &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/vicryldoscero.JPG" alt="Sutura Vicryl 2-0" class="producto-img">
-                    <div class="titulo">
-                        <span class="titulo-producto letreros" id="nombreproducto18">Sutura Vicryl 2-0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto18">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio">$63.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <div class="contador">
-                        <button onclick="cambiarValor(-1,this)">-</button>
-                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto18">
-                        <button onclick="cambiarValor(1,this)">+</button>
-                    </div>
-                    <div class="agregar-quitar">
-                        <button class="agregar" onclick="agregarAlCarrito('Sutura Vicryl 2-0', 'Caja de 36 unidades', 'cantidadproducto18', 63.00)">Agregar &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/vicryltrescero.JPG" alt="Sutura Vicryl 3-0" class="producto-img">
-                    <div class="titulo">
-                        <span class="titulo-producto letreros" id="nombreproducto19">Sutura Vicryl 3-0</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto19">Caja de 36 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio">$63.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <div class="contador">
-                        <button onclick="cambiarValor(-1,this)">-</button>
-                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto19">
-                        <button onclick="cambiarValor(1,this)">+</button>
-                    </div>
-                    <div class="agregar-quitar">
-                        <button class="agregar" onclick="agregarAlCarrito('Sutura Vicryl 3-0', 'Caja de 36 unidades', 'cantidadproducto19', 63.00)">Agregar &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            
-        </section>
-        <section id="apositos">
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/esponjahemostatica.jpg" alt="Esponja Hemostática 10 cm x 12 cm" class="producto-img">
-                    <div class="titulo">
-                        <span class="titulo-producto letreros" id="nombreproducto20">Esponja Hemostática 10 cm x 12 cm</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto20">Unidad</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio">$20.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <div class="contador">
-                        <button onclick="cambiarValor(-1,this)">-</button>
-                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto20">
-                        <button onclick="cambiarValor(1,this)">+</button>
-                    </div>
-                    <div class="agregar-quitar">
-                        <button class="agregar" onclick="agregarAlCarrito('Esponja Hemostática 10 cm x 12 cm', 'Unidad', 'cantidadproducto20', 20.00)">Agregar &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/esponjahemostatica.jpg" alt="Esponja Hemostática 5 cm x 8 cm" class="producto-img">
-                    <div class="titulo">
-                        <span class="titulo-producto letreros" id="nombreproducto21">Esponja Hemostática 5 cm x 8 cm</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto21">Unidad</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio">$12.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <div class="contador">
-                        <button onclick="cambiarValor(-1,this)">-</button>
-                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto21">
-                        <button onclick="cambiarValor(1,this)">+</button>
-                    </div>
-                    <div class="agregar-quitar">
-                        <button class="agregar" onclick="agregarAlCarrito('Esponja Hemostática 5 cm x 8 cm', 'Unidad', 'cantidadproducto21', 12.00)">Agregar &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/hemotamp.jpg" alt="Esponja Hemostática 2 cm x 1 cm" class="producto-img">
-                    <div class="titulo">
-                        <span class="titulo-producto letreros" id="nombreproducto22">Esponja Hemostática 2 cm x 1 cm</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto22">12 unidades</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio">$22.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <div class="contador">
-                        <button onclick="cambiarValor(-1,this)">-</button>
-                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto22">
-                        <button onclick="cambiarValor(1,this)">+</button>
-                    </div>
-                    <div class="agregar-quitar">
-                        <button class="agregar" onclick="agregarAlCarrito('Esponja Hemostática 2 cm x 1 cm', '12 unidades', 'cantidadproducto22', 22.00)">Agregar &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/AlgodonHidrofilo.jpg" alt="Algodón Hidrófilo de 500 gramos" class="producto-img">
-                    <div class="titulo">
-                        <span class="titulo-producto letreros" id="nombreproducto23">Algodón Hidrófilo Seccionado</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto23">Paquete de 500g</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio">$9.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <div class="contador">
-                        <button onclick="cambiarValor(-1,this)">-</button>
-                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto23">
-                        <button onclick="cambiarValor(1,this)">+</button>
-                    </div>
-                    <div class="agregar-quitar">
-                        <button class="agregar" onclick="agregarAlCarrito('Algodón Hidrófilo de 500 gramos', 'Unidad', 'cantidadproducto23', 9.00)">Agregar &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="producto">
-                <div class="letra-img">
-                    <img src="./img/rollogasa.jpg" alt="Rollo de Gasa sin Hilachas (Tipo Tela)" class="producto-img">
-                    <div class="titulo">
-                        <span class="titulo-producto letreros" id="nombreproducto24">Rollo de Gasa sin Hilachas (Tipo Tela)</span>
-                        <span class="titulo-cantidad letreros" id="descripcionproducto24">Rollo de 59cm x 100m</span>
-                    </div>
-                    <div class="etiqueta-price">
-                        <p class="precio">$35.<span class="decimales">00</span></p>
-                    </div>
-                </div>
-                <div class="producto-info">
-                    <div class="contador">
-                        <button onclick="cambiarValor(-1,this)">-</button>
-                        <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto24">
-                        <button onclick="cambiarValor(1,this)">+</button>
-                    </div>
-                    <div class="agregar-quitar">
-                        <button class="agregar" onclick="agregarAlCarrito('Rollo de Gasa sin Hilachas (Tipo Tela)', 'Rollo de 59cm x 100m', 'cantidadproducto24', 35.00)">Agregar &#x1F6D2;</button>
-                    </div>
-                </div>
-            </div>
-            
-            </section>
-            <section id="jeringas">
                 <div class="producto">
                     <div class="letra-img">
-                        <img src="./img/jeringainsulina.jpg" alt="Jeringa de 1ml para insulina" class="producto-img">
+                        <img src="https://i.postimg.cc/Hszp3xTB/imagenes-html-5.jpg" alt="Alcohol Antiséptico 70° Galón" class="producto-img">
                         <div class="titulo">
-                            <span class="titulo-producto letreros" id="nombreproducto30">Jeringa de 1ml para insulina</span>
-                            <span class="titulo-cantidad letreros" id="descripcionproducto30">Caja de 100 unidades</span>
-                        </div>
-                        <div class="etiqueta-price">
-                            <p class="precio">$11.<span class="decimales">00</span></p>
-                        </div>
-                    </div>
-                    <div class="producto-info">
-                        <div class="contador">
-                            <button onclick="cambiarValor(-1,this)">-</button>
-                            <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto30">
-                            <button onclick="cambiarValor(1,this)">+</button>
-                        </div>
-                        <div class="agregar-quitar">
-                            <button class="agregar" onclick="agregarAlCarrito('Jeringa de 1ml para insulina', 'Caja de 100 unidades', 'cantidadproducto30', 11.00)">Agregar &#x1F6D2;</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="producto">
-                    <div class="letra-img">
-                        <img src="./img/jeringaluer.jpg" alt="Jeringa de 1ml Luer-Lock" class="producto-img">
-                        <div class="titulo">
-                            <span class="titulo-producto letreros" id="nombreproducto31">Jeringa de 1ml</span>
-                            <span class="titulo-cantidad letreros" id="descripcionproducto31">Caja de 100 unidades</span>
-                        </div>
-                        <div class="etiqueta-price">
-                            <p class="precio">$9.<span class="decimales">00</span></p>
-                        </div>
-                    </div>
-                    <div class="producto-info">
-                        <div class="contador">
-                            <button onclick="cambiarValor(-1,this)">-</button>
-                            <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto31">
-                            <button onclick="cambiarValor(1,this)">+</button>
-                        </div>
-                        <div class="agregar-quitar">
-                            <button class="agregar" onclick="agregarAlCarrito('Jeringa de 1ml Luer-Lock', 'Caja de 100 unidades', 'cantidadproducto31', 9.00)">Agregar &#x1F6D2;</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="producto">
-                    <div class="letra-img">
-                        <img src="./img/jeringa.jpg" alt="Jeringa de 3ml" class="producto-img">
-                        <div class="titulo">
-                            <span class="titulo-producto letreros" id="nombreproducto32">Jeringa de 3ml</span>
-                            <span class="titulo-cantidad letreros" id="descripcionproducto32">Caja de 100 unidades</span>
-                        </div>
-                        <div class="etiqueta-price">
-                            <p class="precio">$7.<span class="decimales">00</span></p>
-                        </div>
-                    </div>
-                    <div class="producto-info">
-                        <div class="contador">
-                            <button onclick="cambiarValor(-1,this)">-</button>
-                            <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto32">
-                            <button onclick="cambiarValor(1,this)">+</button>
-                        </div>
-                        <div class="agregar-quitar">
-                            <button class="agregar" onclick="agregarAlCarrito('Jeringa de 3ml', 'Caja de 100 unidades', 'cantidadproducto32', 7.00)">Agregar &#x1F6D2;</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="producto">
-                    <div class="letra-img">
-                        <img src="./img/jeringa.jpg" alt="Jeringa de 5ml" class="producto-img">
-                        <div class="titulo">
-                            <span class="titulo-producto letreros" id="nombreproducto33">Jeringa de 5ml</span>
-                            <span class="titulo-cantidad letreros" id="descripcionproducto33">Caja de 100 unidades</span>
-                        </div>
-                        <div class="etiqueta-price">
-                            <p class="precio">$8.<span class="decimales">00</span></p>
-                        </div>
-                    </div>
-                    <div class="producto-info">
-                        <div class="contador">
-                            <button onclick="cambiarValor(-1,this)">-</button>
-                            <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto33">
-                            <button onclick="cambiarValor(1,this)">+</button>
-                        </div>
-                        <div class="agregar-quitar">
-                            <button class="agregar" onclick="agregarAlCarrito('Jeringa de 5ml', 'Caja de 100 unidades', 'cantidadproducto33', 8.00)">Agregar &#x1F6D2;</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="producto">
-                    <div class="letra-img">
-                        <img src="./img/jeringa.jpg" alt="Jeringa de 10ml" class="producto-img">
-                        <div class="titulo">
-                            <span class="titulo-producto letreros" id="nombreproducto34">Jeringa de 10ml</span>
-                            <span class="titulo-cantidad letreros" id="descripcionproducto34">Caja de 100 unidades</span>
+                            <span class="titulo-producto letreros">Alcohol Antiséptico 70°</span>
+                            <span class="titulo-cantidad letreros">Galón de 3.78 litros</span>
+                            <span class="letreros adicional1">Alcohol antiséptico ideal para curaciones. <br>
+                                Elimina el 99.9% de bacterias y virus. <br>
+                                Galón de 3.785 litros</span>
                         </div>
                         <div class="etiqueta-price">
                             <p class="precio">$12.<span class="decimales">00</span></p>
@@ -736,21 +77,175 @@
                     <div class="producto-info">
                         <div class="contador">
                             <button onclick="cambiarValor(-1,this)">-</button>
-                            <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto34">
+                            <input type="number" value="1" min="1" class="cantidad">
                             <button onclick="cambiarValor(1,this)">+</button>
                         </div>
                         <div class="agregar-quitar">
-                            <button class="agregar" onclick="agregarAlCarrito('Jeringa de 10ml', 'Caja de 100 unidades', 'cantidadproducto34', 12.00)">Agregar &#x1F6D2;</button>
+                            <button class="agregar">Agregar &#x1F6D2;</button>
                         </div>
                     </div>
                 </div>
-                
+            
                 <div class="producto">
                     <div class="letra-img">
-                        <img src="./img/jeringa.jpg" alt="Jeringa de 20ml" class="producto-img">
+                        <img src="https://i.postimg.cc/3J8hyT2p/imagenes-html-6.jpg" alt="Alcohol Industrial 96° Galón" class="producto-img">
                         <div class="titulo">
-                            <span class="titulo-producto letreros" id="nombreproducto35">Jeringa de 20ml</span>
-                            <span class="titulo-cantidad letreros" id="descripcionproducto35">Caja de 100 unidades</span>
+                            <span class="titulo-producto letreros">Alcohol Industrial 96°</span>
+                            <span class="titulo-cantidad letreros">Galón de 3.78 litros</span>
+                            <span class="letreros adicional1">Alcohol de 96° ideal para la limpieza y desinfección de superficies. <br>
+                                Uso recomendado en quirófanos y áreas estériles. <br>
+                                Galón de 3.785 litros</span>
+
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$17.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Povidona Solución Litro" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Povidona Solución</span>
+                            <span class="titulo-cantidad letreros">Litro</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$12.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Povidona Solución Galón" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Povidona Solución</span>
+                            <span class="titulo-cantidad letreros">Galón</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$25.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+            </section>
+                        
+            <section id="apositos">
+
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Algodón 450 Gramos" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Algodón 450 Gramos</span>
+                            <span class="titulo-cantidad letreros">Paquete Individual</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$8.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Compresa De Gasa De 45 cm * 45 cm" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Compresa De Gasa De 45 cm * 45 cm</span>
+                            <span class="titulo-cantidad letreros">Paquete de 5 unidades</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$6.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="https://i.postimg.cc/hGC5xjfN/imagenes-html-4.jpg" alt="Esponja Hemostática 10 * 12 cm" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros a">Esponja Hemostática 10 * 12 cm</span>
+                            <span class="titulo-cantidad letreros a">Unidad</span>
+                            <span class="letreros adicional1 adicional">Esponja de colágeno ideal para Odontología, cada esponja mide 2cm * 1cm.</span>
+
+                            <span class="letreros adicional2 adicional">Cada esponja mide 2cm * 1 cm</span>
+
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$19.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="https://i.postimg.cc/hGC5xjfN/imagenes-html-4.jpg" alt="Esponja Hemostática 2 * 1 cm" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Esponja Hemostática 2 * 1 cm</span>
+                            <span class="titulo-cantidad letreros">Caja de 12 unidades</span>
+                            <span class="letreros adicional1">Esponja de colágeno ideal para Odontología. <br>
+                                Cada esponja mide 2cm por 1cm. <br>
+                                Caja de 12 unidades</span>
+
                         </div>
                         <div class="etiqueta-price">
                             <p class="precio">$20.<span class="decimales">00</span></p>
@@ -759,16 +254,702 @@
                     <div class="producto-info">
                         <div class="contador">
                             <button onclick="cambiarValor(-1,this)">-</button>
-                            <input type="number" value="1" min="1" class="cantidad" id="cantidadproducto35">
+                            <input type="number" value="1" min="1" class="cantidad">
                             <button onclick="cambiarValor(1,this)">+</button>
                         </div>
                         <div class="agregar-quitar">
-                            <button class="agregar" onclick="agregarAlCarrito('Jeringa de 20ml', 'Caja de 100 unidades', 'cantidadproducto35', 20.00)">Agregar &#x1F6D2;</button>
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Esponja Hemostática 8 * 5 cm" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Esponja Hemostática 8 * 5 cm</span>
+                            <span class="titulo-cantidad letreros">Unidad</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$12.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Gasa Rollo Sin Hilachas (Tipo Tela) 20cm * 100 metros" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Gasa Rollo Sin Hilachas (Tipo Tela)</span>
+                            <span class="titulo-cantidad letreros">Rollo de 20cm * 100 metros</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$0.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Gasa Rollo Sin Hilachas (Tipo Tela) 61cm * 100 metros" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Gasa Rollo Sin Hilachas (Tipo Tela)</span>
+                            <span class="titulo-cantidad letreros">Rollo de 61cm * 100 metros</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$35.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+            </section>
+            <section id="descartables">
+
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Baberos Desechables Tipo Toalla" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Baberos Desechables Tipo Toalla</span>
+                            <span class="titulo-cantidad letreros">Paquete de 50 unidades</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$15.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Bata Quirúrgica Puño De Algodón" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Bata Quirúrgica Puño De Algodón</span>
+                            <span class="titulo-cantidad letreros">Unidad</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$2.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Gorro Quirúrgico (Cofias)" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Gorro Quirúrgico (Cofias)</span>
+                            <span class="titulo-cantidad letreros">Paquete de 100 unidades</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$8.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Gorro Tipo Velo" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Gorro Tipo Velo</span>
+                            <span class="titulo-cantidad letreros">Unidad</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$1.<span class="decimales">20</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Lencería Brazier" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Lencería Brazier</span>
+                            <span class="titulo-cantidad letreros">Unidad</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$1.<span class="decimales">20</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Lencería Tangas" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Lencería Tangas</span>
+                            <span class="titulo-cantidad letreros">Unidad</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$1.<span class="decimales">20</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Shorts De Hombre" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Shorts De Hombre</span>
+                            <span class="titulo-cantidad letreros">Unidad</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$1.<span class="decimales">20</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Zapatones Quirúrgicos" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Zapatones Quirúrgicos</span>
+                            <span class="titulo-cantidad letreros">Paquete de 50 pares</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$15.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+            </section>
+            <section id="esterilizacion">
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Bolsa De Esterilización 13.5 * 28 cm" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Bolsa De Esterilización 13.5 * 28 cm</span>
+                            <span class="titulo-cantidad letreros">Paquete de 200 unidades</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$20.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Bolsa De Esterilización 19 * 36 cm" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Bolsa De Esterilización 19 * 36 cm</span>
+                            <span class="titulo-cantidad letreros">Paquete de 200 unidades</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$35.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Bolsa De Esterilización 9 * 26 cm" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Bolsa De Esterilización 9 * 26 cm</span>
+                            <span class="titulo-cantidad letreros">Paquete de 200 unidades</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$17.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Cinta Testigo" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Cinta Testigo</span>
+                            <span class="titulo-cantidad letreros">Unidad</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$8.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Óxido De Etileno" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Óxido De Etileno</span>
+                            <span class="titulo-cantidad letreros">Kit Cartucho</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$14.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Rollo De Esterilización 100mm x 200m" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Rollo De Esterilización 100mm x 200m</span>
+                            <span class="titulo-cantidad letreros">Rollo de 100 mm x 200 m</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$45.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Rollo De Esterilización 200mm x 200m" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Rollo De Esterilización 200mm x 200m</span>
+                            <span class="titulo-cantidad letreros">Rollo de 200 mm x 200 m</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$60.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Rollo De Esterilización 250mm x 200m" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Rollo De Esterilización 250mm x 200m</span>
+                            <span class="titulo-cantidad letreros">Rollo de 250 mm x 200 m</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$70.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Rollo De Esterilización 300mm x 200m" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Rollo De Esterilización 300mm x 200m</span>
+                            <span class="titulo-cantidad letreros">Rollo de 300 mm x 200 m</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$80.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Rollo De Esterilización 400mm x 200m" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Rollo De Esterilización 400mm x 200m</span>
+                            <span class="titulo-cantidad letreros">Rollo de 400 mm x 200 m</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$90.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Rollo De Esterilización 75mm x 200m" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Rollo De Esterilización 75mm x 200m</span>
+                            <span class="titulo-cantidad letreros">Rollo de 75 mm x 200 m</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$30.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Indicador Químico Eto C16" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Indicador Químico Eto C16</span>
+                            <span class="titulo-cantidad letreros">Paquete de 250 tirillas</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$30.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
                         </div>
                     </div>
                 </div>
                 
             </section>
+            <section id="guanteslatex">
+
+                <!-- Guantes De Látex Talla S -->
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Guantes De Látex Talla S" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Guantes De Látex Talla S</span>
+                            <span class="titulo-cantidad letreros">Paquete de 100 unidades</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$6.<span class="decimales">50</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Guantes De Látex Talla M -->
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Guantes De Látex Talla M" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Guantes De Látex Talla M</span>
+                            <span class="titulo-cantidad letreros">Paquete de 100 unidades</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$6.<span class="decimales">50</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Guantes De Látex Talla L -->
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Guantes De Látex Talla L" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Guantes De Látex Talla L</span>
+                            <span class="titulo-cantidad letreros">Paquete de 100 unidades</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$6.<span class="decimales">50</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+            </section>
+            <section id="guantesnitrilo">
+
+                <!-- Guantes De Nitrilo Talla S -->
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Guantes De Nitrilo Talla S" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Guantes De Nitrilo Talla S</span>
+                            <span class="titulo-cantidad letreros">Paquete de 100 unidades</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$8.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Guantes De Nitrilo Talla M -->
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Guantes De Nitrilo Talla M" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Guantes De Nitrilo Talla M</span>
+                            <span class="titulo-cantidad letreros">Paquete de 100 unidades</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$8.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Guantes De Nitrilo Talla L -->
+                <div class="producto">
+                    <div class="letra-img">
+                        <img src="./img/" alt="Guantes De Nitrilo Talla L" class="producto-img">
+                        <div class="titulo">
+                            <span class="titulo-producto letreros">Guantes De Nitrilo Talla L</span>
+                            <span class="titulo-cantidad letreros">Paquete de 100 unidades</span>
+                        </div>
+                        <div class="etiqueta-price">
+                            <p class="precio">$8.<span class="decimales">00</span></p>
+                        </div>
+                    </div>
+                    <div class="producto-info">
+                        <div class="contador">
+                            <button onclick="cambiarValor(-1,this)">-</button>
+                            <input type="number" value="1" min="1" class="cantidad">
+                            <button onclick="cambiarValor(1,this)">+</button>
+                        </div>
+                        <div class="agregar-quitar">
+                            <button class="agregar">Agregar &#x1F6D2;</button>
+                        </div>
+                    </div>
+                </div>
+            
+            </section>
+            
+            
+
         
 
 
