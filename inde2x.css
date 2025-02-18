@@ -482,7 +482,7 @@ li, a{
     justify-content: end;
     position: absolute;
     
-    top: 20%; /* Ajusta a la mitad del contenedor */
+    top: 30%; /* Ajusta a la mitad del contenedor */
     left: 70%; /* Ajusta al centro horizontal */
 
     width: auto;
