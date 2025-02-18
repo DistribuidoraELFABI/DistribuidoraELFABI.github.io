@@ -244,16 +244,24 @@ window.generarPDF = function (totalCarrito) {
     enlaceDescarga.download = "carrito_compras.pdf";
     enlaceDescarga.click();
 };
-//funcion cambiar valor
-window.cambiarValor = function(valor) {
-    let input = document.getElementById("cantidadproducto1");
-    let nuevoValor = parseInt(input.value) + valor;
-    if (nuevoValor >= input.min) {
+
+
+window.cambiarValor= function(cambio, boton) {
+    // Encuentra el contenedor más cercano (el div con clase 'contador')
+    const contenedor = boton.closest('.contador');
+    
+    // Encuentra el input dentro del contenedor
+    const input = contenedor.querySelector('.cantidad');
+    
+    // Modifica el valor del input
+    let nuevoValor = parseInt(input.value) + cambio;
+    
+    // Asegúrate de que el valor no sea menor que 1
+    if (nuevoValor >= 1) {
         input.value = nuevoValor;
     }
 }
 
-// menu hamburguesa
 
 function hamburguerMenu(panelBtn, panel){
     const d = document;
@@ -262,12 +270,12 @@ function hamburguerMenu(panelBtn, panel){
             d.querySelector(panel).classList.toggle("is-active");
             d.querySelector(panelBtn).classList.toggle("is-active");
         }
-        if(e.target.matches(menuLink)){
-            d.querySelector(panel).classList.remove("is-active");
-            d.querySelector(panelBtn).classList.remove("is-active");
+        // if(e.target.matches(menuLink)){
+        //     d.querySelector(panel).classList.remove("is-active");
+        //     d.querySelector(panelBtn).classList.remove("is-active");
 
 
-        }
+        // }
     })
 }
 
@@ -276,34 +284,68 @@ d.addEventListener("DOMContentLoaded",(e)=>{
     hamburguerMenu(".panelBtn", ".carrito-detalles",".carrito-detalles a")
 })
 
-// move cart
 
-window.addEventListener("DOMContentLoaded", relocateCart);
+window.document.addEventListener("DOMContentLoaded", function () {
+    // Crear el modal
+    const modal = document.createElement("div");
+    modal.classList.add("modal");
+    modal.innerHTML = `
+        <div class="modal-content">
+            <img class="modal-img" src="" alt="Imagen ampliada">
+            <div class="modal-text">
+                <span class="modal-title"></span>
+            </div>
+            <div class="modal-text2">
+                <span class="modal-description"></span>
+            </div>
+            <div class="modal-text3">
+                <span class="modal-adicional1"></span>
 
-// Solo ejecutar cuando el tamaño de la ventana cambia
-window.addEventListener("resize", function() {
-    clearTimeout(window.resizeTimeout);
-    window.resizeTimeout = setTimeout(relocateCart, 200); // Retraso de 200ms
-});
+            </div>            
+            <div class="modal-price">
+                <p class="modal-price"></p>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
 
-function relocateCart(){
-    const cart = document.querySelector(".cart");
-    const main = document.querySelector("main");
-    const header = document.querySelector("header");
+    const modalImg = modal.querySelector(".modal-img");
+    const modalTitle = modal.querySelector(".modal-title");
+    const modalDescription = modal.querySelector(".modal-description");
+    const modalPrice = modal.querySelector(".modal-price");
+    
+    const modalAdicional1 = modal.querySelector(".modal-adicional1");
+    // const modalAdicional2 = modal.querySelector(".modal-adicional2");
 
-    // Obtener el ancho de la ventana de forma redondeada para evitar problemas con valores decimales
-    const windowWidth = Math.floor(window.innerWidth);
+    // Detectar clic en los contenedores .letra-img
+    document.querySelectorAll(".letra-img").forEach(container => {
+        container.addEventListener("click", function () {
+            // Obtener la imagen y los títulos
+            const img = container.querySelector("img");
+            const title = container.querySelector(".titulo-producto");
+            const description = container.querySelector(".titulo-cantidad");
+            const adicional1 = container.querySelector(".adicional1");
+            // const adicional2 = container.querySelector(".adicional2");
 
-    if(windowWidth <= 425){
-        // Si la pantalla es menor o igual a 425px
-        if(!main.contains(cart)){
-            main.prepend(cart); // Moverá el carrito a main
-        } 
-    } else {
-        // Si el ancho es mayor a 425px
-        const nav = header.querySelector("nav");
-        if(!nav.contains(cart)){ 
-            nav.appendChild(cart); // Regresa el carrito al header
+            const price = container.querySelector(".precio");
+
+            modalImg.src = img.src; // Asigna el src de la imagen al modal
+            modalTitle.textContent = title.textContent; // Asigna el texto del título al modal
+            modalDescription.textContent = description.textContent; // Asigna el texto de la descripción al modal
+            modalAdicional1.innerHTML = adicional1.innerHTML;
+
+            // modalAdicional1.textContent = adicional1.textContent;
+            // modalAdicional2.textContent = adicional2.textContent;
+            modalPrice.textContent = price.textContent;
+
+            modal.classList.add("active");
+        });
+    });
+
+    // Cerrar el modal al hacer clic fuera de la imagen
+    modal.addEventListener("click", function (e) {
+        if (e.target !== modalImg && e.target !== modalTitle && e.target !== modalDescription) {
+            modal.classList.remove("active");
         }
-    }
-}
+    });
+});
