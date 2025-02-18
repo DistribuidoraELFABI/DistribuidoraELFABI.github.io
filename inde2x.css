@@ -468,13 +468,15 @@ li, a{
     font-weight: bold; /* Negrita */
     font-size: calc(7px + 1vw); /* Ajusta el tamaño dinámicamente */
     text-align: center;
-    word-wrap: break-word; /* Divide el texto en varias líneas si es necesario */
 
     background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
 }
-span{
-    font-size: auto;
+.titulo>span{
+    font-size: 1em;
 }
+.adicional1, .adicional2, .adicional3{
+    display: none;
+} 
 .precio {
     display: flex;
     justify-content: end;
@@ -614,15 +616,19 @@ section{
 
 .modal-content {
     position: relative;
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 90%;
+    max-height: 90%;
     overflow: hidden;
+    text-align: center;
+
+    display: flex !important;
+    flex-direction: column;
 
 }
 
 .modal-img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
 
 }
@@ -633,19 +639,75 @@ section{
     left: 5%;
     width: 90%;
     color: white;
-    font-size: 20px;
+    font-size: 0.9em;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px;
+    padding: 1px;
 
-    
+    align-items: center;
+    justify-content: center;
 
+}
+.modal-text3{
+    display: flex;
+    flex-direction: column;
+
+}
+.modal-adicional1{
+    position: absolute;
+    bottom: 10%;
+    left: 2%;
+    width: 69%;
+    color: white;
+    font-size: 0.9em;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+
+    text-align: left;
+}
+/* .modal-adicional2{
+    position: absolute;
+    bottom: 8%;
+    left: 5%;
+    width: 71%;
+    color: white;
+    font-size: 1em;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+} */
+/* .modal-text2{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    width: 90%;
+    color: white;
+    font-size: 1em;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px;
+} */
+
+.modal-price{
+    position: absolute;
+    top: 70%;
+    left: 75%;
+    width: auto;
+    color: rgb(198, 9, 9);
+    border: solid 1px rgb(198,9,9);
+    font-size: 1.5em;
+    background-color: rgb(242, 200, 13);
+    padding: 2px;
+    border-radius: 15px;
+    font-weight: bold;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 
 .modal-title {
     display: block;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 
     
 }
@@ -948,6 +1010,13 @@ section{
     .contador input{
         margin: 0;
         padding: 0;
+    }
+    .titulo{
+        width: 98%!important;
+    }
+
+.titulo>.letreros{
+        font-size: 0.9em;
     }
 
 }
