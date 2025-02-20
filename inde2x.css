@@ -719,6 +719,57 @@ section{
     display: block;
 }
 
+.menu-hamburguesa {
+    position: fixed;
+    bottom: -100%; /* Inicialmente oculto fuera de la pantalla */
+    left: 1%;
+    width: 90%;
+    background: rgba(28, 27, 27, 0.893);
+    padding: 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    transition: bottom 0.3s ease-in-out; /* Animación */
+}
+
+.menu-hamburguesa.is-active {
+    bottom: 10%; /* Se desliza hacia arriba */
+    width: 90%;
+}
+
+/* Estilos para la lista dentro del menú hamburguesa */
+.menu-hamburguesa ul {
+    list-style: none; /* Quita los estilos de viñetas */
+    bottom: 40%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en fila vertical */
+    align-items: center; /* Centra el contenido */
+    gap: 10px; /* Espaciado entre elementos */
+}
+
+/* Estilos para los ítems del menú */
+.menu-hamburguesa ul li {
+    width: 100%; /* Hace que cada opción ocupe todo el ancho */
+    text-align: center;
+}
+
+/* Estilos para los enlaces */
+.menu-hamburguesa ul li a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    left: 10%;
+    text-decoration: none;
+    color: black;
+    background: #dbd7d78a;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.menu-hamburguesa ul li a:hover {
+    background: #ddd;
+}
+
 
 /* end agrandar imagen */
 @media (max-width:425px){
@@ -802,7 +853,7 @@ section{
     }
     
     .retroceder, .avanzar {
-        font-size: 32px; /* Tamaño grande para las flechas */
+        font-size: 1em; /* Tamaño grande para las flechas */
         transition: transform 0.3s ease; /* Suaviza el efecto al pasar el ratón */
     }
     
@@ -812,11 +863,11 @@ section{
     
     /* Si se usan flechas en el HTML */
     .retroceder {
-        font-size: 40px; /* Flecha de retroceso más grande */
+        font-size: 1em; /* Flecha de retroceso más grande */
     }
     
     .avanzar {
-        font-size: 100px; /* Flecha de avance más grande */
+        font-size: 1em; /* Flecha de avance más grande */
     }
 
 
@@ -881,30 +932,26 @@ section{
         background-color: #fff; /* Establece el color de fondo */
         z-index: 1000; /* Asegura que el nav quede encima de otros elementos */
         box-shadow: 0 -4px 2px -2px gray; /* Sombra en la parte superior del nav */
+        display: flex; /* Activa Flexbox */
+        justify-content: center; /* Centra los elementos horizontalmente */
+        align-items: center; /* Centra los elementos verticalmente */
     }
     
-    nav.menu ul {
-        display: flex; /* Disposición horizontal */
-        justify-content: space-between; /* Espacio igual entre los elementos */
-        margin: 0;
-        padding: 10px 20px; /* Espaciado dentro del nav */
-        list-style: none; /* Elimina los puntos de la lista */
+    nav.menu button {
+        margin: 0 10px; /* Espaciado entre los botones */
+        border-radius: 10px;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    button.menu1{
+        font-size: 1.5em !important;
+        padding: 2px !important;
     }
     
-    nav.menu ul li {
-        display: inline-block; /* Alinea los elementos en línea */
-    }
     
-    nav.menu ul li a {
-        text-decoration: none; /* Elimina el subrayado del enlace */
-        color: #faf8f8; /* Color del texto */
-        font-size: 16px; /* Tamaño de la fuente */
-        padding: 8px 16px; /* Espaciado alrededor del enlace */
-    }
-    
-    nav.menu ul li a:hover {
-        background-color: #f0f0f0; /* Cambio de fondo al pasar el ratón */
-    }
+
 
     .cart {
         position: fixed;
@@ -1060,5 +1107,15 @@ section{
         padding: 5px;
         margin: 0;
     }
-    
+    .menu-hamburguesa {
+        max-height: 70vh; /* Limitar la altura */
+        overflow-y: auto; /* Permitir el scroll vertical */
+        display: block; /* Asegura que se comporta como un bloque */
+        margin-top: 3rem;
+    }    
+
 }
+
+
+
+        
