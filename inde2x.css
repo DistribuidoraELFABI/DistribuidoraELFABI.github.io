@@ -17,9 +17,9 @@ html{
 :root{
     --mi-borde: solid 1px red;
 }
-.menu{
+/* .menu{
     display: none;
-}
+} */
 /* Colores generales */
 body {
     background-color: #d7e1f0; /* Fondo claro, fresco y suave */
@@ -483,7 +483,7 @@ li, a{
     position: absolute;
     
     top: 30%; /* Ajusta a la mitad del contenedor */
-    left: 65%; /* Ajusta al centro horizontal */
+    left: 75%; /* Ajusta al centro horizontal */
 
     width: auto;
     height: auto;
@@ -719,32 +719,37 @@ section{
     display: block;
 }
 
+/* Estilos para el contenedor del menú hamburguesa */
 .menu-hamburguesa {
     position: fixed;
     bottom: -100%; /* Inicialmente oculto fuera de la pantalla */
-    left: 1%;
+    left: 50%; /* Centra el menú horizontalmente */
+    transform: translateX(-50%); /* Compensa el 50% del ancho para centrarlo */
     width: 90%;
     background: rgba(28, 27, 27, 0.893);
     padding: 20px;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
     transition: bottom 0.3s ease-in-out; /* Animación */
+    max-height: 70vh; /* Limitar la altura */
+    overflow-y: auto; /* Permitir el scroll vertical */
+    display: block; /* Asegura que se comporta como un bloque */
+    margin-top: 3rem; /* Separación desde el top */
 }
 
+/* Cuando el menú se activa */
 .menu-hamburguesa.is-active {
     bottom: 10%; /* Se desliza hacia arriba */
-    width: 90%;
 }
 
 /* Estilos para la lista dentro del menú hamburguesa */
 .menu-hamburguesa ul {
     list-style: none; /* Quita los estilos de viñetas */
-    bottom: 40%;
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column; /* Coloca los elementos en fila vertical */
-    align-items: center; /* Centra el contenido */
-    gap: 10px; /* Espaciado entre elementos */
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    gap: 10px; /* Espaciado entre los elementos */
 }
 
 /* Estilos para los ítems del menú */
@@ -756,19 +761,49 @@ section{
 /* Estilos para los enlaces */
 .menu-hamburguesa ul li a {
     display: block;
-    width: 100%;
+    width: 80%;
     padding: 10px;
-    left: 10%;
     text-decoration: none;
     color: black;
-    background: #dbd7d78a;
+    background: #dbd7d7b7;
     border-radius: 5px;
     transition: background 0.3s;
+    text-align: center; /* Centra el texto dentro del enlace */
+    margin: 0 auto; /* Centra el bloque horizontalmente */
 }
 
+/* Efecto hover para los enlaces */
 .menu-hamburguesa ul li a:hover {
     background: #ddd;
 }
+  
+nav.menu {
+    position: fixed; /* Fija el nav en la pantalla */
+    bottom: 0; /* Lo coloca en la parte inferior */
+    left: 0; /* Lo alinea con el borde izquierdo */
+    width: 100%; /* Hace que el nav ocupe todo el ancho de la pantalla */
+    background-color: #fff; /* Establece el color de fondo */
+    z-index: 1000; /* Asegura que el nav quede encima de otros elementos */
+    box-shadow: 0 -4px 2px -2px gray; /* Sombra en la parte superior del nav */
+    display: flex; /* Activa Flexbox */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+nav.menu button {
+    margin: 0 10px; /* Espaciado entre los botones */
+    border-radius: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+button.menu1{
+    font-size: 1.5em !important;
+    padding: 2px !important;
+}
+
+
 
 
 /* end agrandar imagen */
