@@ -1,3 +1,4 @@
+
     let carrito = [];
 
 
@@ -269,6 +270,62 @@ window.cambiarValor= function(cambio, boton) {
 
 
 //agrandar imagen
+
+
+
+// menu footer
+
+// Función para manejar el clic en los enlaces y realizar el desplazamiento suave
+
+
+// Función para retroceder y avanzar entre secciones
+// Evento de clic para todos los enlaces
+document.addEventListener("DOMContentLoaded", function () {
+    // Lista de IDs de las secciones
+    const sections = [
+        "antisepticos",
+        "apositos",
+        "descartables",
+        "esterilizacion",
+        "guanteslatex",
+        "guantesnitrilo",
+        "guantesquirur",
+        "jeringas"
+    ];
+
+    let currentSectionIndex = 0; // Para rastrear la sección actual
+
+    // Asignar eventos de clic para los botones
+    document.getElementById('retroceder').addEventListener('click', function () {
+        if (currentSectionIndex > 0) {
+            currentSectionIndex--;
+            navigateToSection(sections[currentSectionIndex]);
+        }
+    });
+
+    document.getElementById('avanzar').addEventListener('click', function () {
+        if (currentSectionIndex < sections.length - 1) {
+            currentSectionIndex++;
+            navigateToSection(sections[currentSectionIndex]);
+        }
+    });
+
+    // Función para hacer scroll suave a la sección
+    function navigateToSection(sectionId) {
+        const targetElement = document.getElementById(sectionId);
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth', // Efecto suave
+                block: 'start'      // Asegura que la sección esté al principio de la vista
+            });
+        }
+    }
+});
+
+
+
+
+
 
 
 
